@@ -33,27 +33,27 @@ public class Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_game_queens = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btn_game_tictactoe = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        btn_game_valueIndex = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        btn_game_shortest = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        btn_game_predict = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -86,13 +86,13 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("8 Qeens Game");
 
-        jButton1.setBackground(new java.awt.Color(255, 128, 19));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Play");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_game_queens.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_queens.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_game_queens.setForeground(new java.awt.Color(255, 255, 255));
+        btn_game_queens.setText("Play");
+        btn_game_queens.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_game_queensActionPerformed(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_game_queens, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -122,7 +122,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_game_queens, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -138,13 +138,13 @@ public class Home extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tic Tac Toe Game");
 
-        jButton3.setBackground(new java.awt.Color(255, 128, 19));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Play");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_game_tictactoe.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_tictactoe.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_game_tictactoe.setForeground(new java.awt.Color(255, 255, 255));
+        btn_game_tictactoe.setText("Play");
+        btn_game_tictactoe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_game_tictactoeActionPerformed(evt);
             }
         });
 
@@ -159,7 +159,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_game_tictactoe, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -174,7 +174,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_game_tictactoe, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -190,13 +190,13 @@ public class Home extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Value Index Game");
 
-        jButton4.setBackground(new java.awt.Color(255, 128, 19));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Play");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_game_valueIndex.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_valueIndex.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_game_valueIndex.setForeground(new java.awt.Color(255, 255, 255));
+        btn_game_valueIndex.setText("Play");
+        btn_game_valueIndex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn_game_valueIndexActionPerformed(evt);
             }
         });
 
@@ -211,7 +211,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_game_valueIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -226,7 +226,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_game_valueIndex, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -240,15 +240,15 @@ public class Home extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Find Shortast Path Game");
+        jLabel16.setText("Find Shortest Path Game");
 
-        jButton5.setBackground(new java.awt.Color(255, 128, 19));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Play");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn_game_shortest.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_shortest.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_game_shortest.setForeground(new java.awt.Color(255, 255, 255));
+        btn_game_shortest.setText("Play");
+        btn_game_shortest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn_game_shortestActionPerformed(evt);
             }
         });
 
@@ -263,7 +263,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_game_shortest, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -278,7 +278,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_game_shortest, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -294,13 +294,13 @@ public class Home extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Predict Value Game");
 
-        jButton6.setBackground(new java.awt.Color(255, 128, 19));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Play");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btn_game_predict.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_predict.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btn_game_predict.setForeground(new java.awt.Color(255, 255, 255));
+        btn_game_predict.setText("Play");
+        btn_game_predict.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btn_game_predictActionPerformed(evt);
             }
         });
 
@@ -315,7 +315,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel19)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_game_predict, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -330,7 +330,7 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_game_predict, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
 
@@ -401,25 +401,35 @@ public class Home extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btn_close_windowActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btn_game_queensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_queensActionPerformed
+        this.dispose();
+        Queens game_queens = new Queens();
+        game_queens.setVisible(true);
+    }//GEN-LAST:event_btn_game_queensActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btn_game_tictactoeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_tictactoeActionPerformed
+        this.dispose();
+        TicTacToe game_tic_tac_toe = new TicTacToe();
+        game_tic_tac_toe.setVisible(true);
+    }//GEN-LAST:event_btn_game_tictactoeActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btn_game_valueIndexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_valueIndexActionPerformed
+        this.dispose();
+        Sort game_valueIndex = new Sort();
+        game_valueIndex.setVisible(true);
+    }//GEN-LAST:event_btn_game_valueIndexActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void btn_game_shortestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_shortestActionPerformed
+         this.dispose();
+         Shortast game_shortastPath = new Shortast();
+         game_shortastPath.setVisible(true);
+    }//GEN-LAST:event_btn_game_shortestActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btn_game_predictActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_predictActionPerformed
+        this.dispose();
+        Search game_predict = new Search();
+        game_predict.setVisible(true);
+    }//GEN-LAST:event_btn_game_predictActionPerformed
 
     /**
      * @param args the command line arguments
@@ -458,12 +468,12 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_close_window;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_game_predict;
+    private javax.swing.JButton btn_game_queens;
+    private javax.swing.JButton btn_game_shortest;
+    private javax.swing.JButton btn_game_tictactoe;
+    private javax.swing.JButton btn_game_valueIndex;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
