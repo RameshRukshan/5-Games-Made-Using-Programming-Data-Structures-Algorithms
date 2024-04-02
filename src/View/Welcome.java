@@ -13,6 +13,9 @@ public class Welcome extends javax.swing.JFrame {
     /**
      * Creates new form Welcome
      */
+    
+    String player_name;
+    
     public Welcome() {
         initComponents();
     }
@@ -31,7 +34,7 @@ public class Welcome extends javax.swing.JFrame {
         btn_close_window = new javax.swing.JButton();
         img_main = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        txt_PlayerName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,11 +64,11 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setMargin(new java.awt.Insets(6, 6, 6, 6));
+        txt_PlayerName.setBackground(new java.awt.Color(204, 204, 204));
+        txt_PlayerName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        txt_PlayerName.setForeground(new java.awt.Color(0, 0, 0));
+        txt_PlayerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_PlayerName.setMargin(new java.awt.Insets(6, 6, 6, 6));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,7 +90,7 @@ public class Welcome extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(176, 176, 176)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                    .addComponent(txt_PlayerName)
                     .addComponent(img_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addComponent(btn_close_window)
@@ -106,7 +109,7 @@ public class Welcome extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_PlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(63, Short.MAX_VALUE))
@@ -133,6 +136,7 @@ public class Welcome extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
+        player_name = txt_PlayerName.getText();
         Home h = new Home();
         h.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -178,6 +182,6 @@ public class Welcome extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_PlayerName;
     // End of variables declaration//GEN-END:variables
 }
