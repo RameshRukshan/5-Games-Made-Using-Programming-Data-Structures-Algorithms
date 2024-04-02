@@ -44,7 +44,7 @@ public class InvalidOperation extends javax.swing.JFrame {
         lbl_Invalid_txt.setForeground(new java.awt.Color(0, 0, 0));
         lbl_Invalid_txt.setText("Invalid Operation");
 
-        btn_game_queens.setBackground(new java.awt.Color(255, 128, 19));
+        btn_game_queens.setBackground(new java.awt.Color(255, 0, 0));
         btn_game_queens.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btn_game_queens.setForeground(new java.awt.Color(255, 255, 255));
         btn_game_queens.setText("Okay");
