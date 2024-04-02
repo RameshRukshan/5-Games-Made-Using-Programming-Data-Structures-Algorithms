@@ -13,9 +13,13 @@ public class Queens extends javax.swing.JFrame {
     /**
      * Creates new form Queens
      */
+    int remaining_queens = 8;
+    
     public Queens() {
         initComponents();
+        lbl_remain_queens.setText(String.valueOf(remaining_queens));
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,9 +114,12 @@ public class Queens extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_reset = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
+        lbl_remain_queens = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -869,14 +876,14 @@ public class Queens extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("8");
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-18-autorenew (1).gif"))); // NOI18N
-        jButton1.setText("Restart");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_reset.setBackground(new java.awt.Color(255, 51, 51));
+        btn_reset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_reset.setForeground(new java.awt.Color(0, 0, 0));
+        btn_reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-18-autorenew (1).gif"))); // NOI18N
+        btn_reset.setText("Restart");
+        btn_reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_resetActionPerformed(evt);
             }
         });
 
@@ -892,6 +899,18 @@ public class Queens extends javax.swing.JFrame {
         });
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/8 Queens (1).png"))); // NOI18N
+
+        lbl_remain_queens.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl_remain_queens.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_remain_queens.setText("8");
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Queens");
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Remaining Queens");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -937,14 +956,24 @@ public class Queens extends javax.swing.JFrame {
                                 .addGap(46, 46, 46)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(41, 60, Short.MAX_VALUE))
+                                    .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(11, 11, 11)
+                                        .addComponent(lbl_remain_queens, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel20)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_close_window)
-                        .addGap(22, 22, 22))))
+                        .addComponent(btn_close_window)))
+                .addGap(22, 22, 22))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(978, Short.MAX_VALUE)
+                    .addComponent(jLabel21)
+                    .addGap(31, 31, 31)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -974,17 +1003,21 @@ public class Queens extends javax.swing.JFrame {
                                 .addGap(85, 85, 85)
                                 .addComponent(jLabel11)
                                 .addGap(86, 86, 86)
-                                .addComponent(jLabel12))
+                                .addComponent(jLabel12)
+                                .addGap(80, 80, 80)
+                                .addComponent(jLabel13)
+                                .addGap(71, 71, 71)
+                                .addComponent(jLabel14)
+                                .addGap(76, 76, 76)
+                                .addComponent(jLabel15))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(80, 80, 80)
-                        .addComponent(jLabel13)
-                        .addGap(71, 71, 71)
-                        .addComponent(jLabel14)
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel15)
+                                .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(174, 174, 174)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel20)
+                                    .addComponent(lbl_remain_queens))))
                         .addGap(88, 88, 88)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -993,6 +1026,11 @@ public class Queens extends javax.swing.JFrame {
                                 .addComponent(jLabel17))
                             .addComponent(jLabel18))))
                 .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(362, 362, 362)
+                    .addComponent(jLabel21)
+                    .addContainerGap(619, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1017,264 +1055,771 @@ public class Queens extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_close_windowActionPerformed
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
-        // TODO add your handling code here:
+
+        if(remaining_queens > 0){
+            B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B1ActionPerformed
 
     private void A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1ActionPerformed
-        A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+        if(remaining_queens > 0){
+            A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A1ActionPerformed
 
     private void D1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D1ActionPerformed
 
     private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C1ActionPerformed
 
     private void F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F1ActionPerformed
 
     private void E1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E1ActionPerformed
 
     private void H1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H1ActionPerformed
 
     private void G1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G1ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B2ActionPerformed
 
     private void A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A2ActionPerformed
 
     private void D2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D2ActionPerformed
 
     private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C2ActionPerformed
 
     private void F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F2ActionPerformed
-        // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F2ActionPerformed
 
     private void E2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E2ActionPerformed
 
     private void H2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H2ActionPerformed
 
     private void G2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G2ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G2ActionPerformed
 
     private void G3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G3ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B3ActionPerformed
 
     private void F3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F3ActionPerformed
 
     private void D3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D3ActionPerformed
 
     private void A3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A3ActionPerformed
 
     private void E3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E3ActionPerformed
 
     private void C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C3ActionPerformed
 
     private void H3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H3ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H3ActionPerformed
 
     private void E4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E4ActionPerformed
 
     private void F4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F4ActionPerformed
 
     private void H4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H4ActionPerformed
 
     private void C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C4ActionPerformed
 
     private void G4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
+        
     }//GEN-LAST:event_G4ActionPerformed
 
     private void A4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A4ActionPerformed
 
     private void B4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B4ActionPerformed
 
     private void D4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D4ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D4ActionPerformed
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B5ActionPerformed
 
     private void A5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A5ActionPerformed
 
     private void D5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D5ActionPerformed
 
     private void C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C5ActionPerformed
 
     private void F5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F5ActionPerformed
 
     private void E5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E5ActionPerformed
 
     private void H5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H5ActionPerformed
 
     private void G5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G5ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G5ActionPerformed
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B6ActionPerformed
 
     private void A6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A6ActionPerformed
 
     private void D6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D6ActionPerformed
 
     private void C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C6ActionPerformed
 
     private void F6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F6ActionPerformed
 
     private void E6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E6ActionPerformed
 
     private void H6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H6ActionPerformed
 
     private void G6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G6ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G6ActionPerformed
 
     private void G7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G7ActionPerformed
 
     private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B7ActionPerformed
 
     private void F7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F7ActionPerformed
 
     private void D7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D7ActionPerformed
 
     private void A7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A7ActionPerformed
 
     private void E7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E7ActionPerformed
 
     private void C7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C7ActionPerformed
 
     private void H7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H7ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H7ActionPerformed
 
     private void E8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_E8ActionPerformed
 
     private void F8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_F8ActionPerformed
 
     private void H8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_H8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            H8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_H8ActionPerformed
 
     private void C8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_C8ActionPerformed
 
     private void G8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_G8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_G8ActionPerformed
 
     private void A8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            A8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_A8ActionPerformed
 
     private void B8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_B8ActionPerformed
 
     private void D8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_D8ActionPerformed
         // TODO add your handling code here:
+        if(remaining_queens > 0){
+            D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
+            remaining_queens = remaining_queens - 1;
+            lbl_remain_queens.setText(String.valueOf(remaining_queens));
+        }else{
+            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
+            inv.setVisible(true);
+        }
     }//GEN-LAST:event_D8ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        this.dispose();
+        Queens qu = new Queens();
+        qu.setVisible(true);
+    }//GEN-LAST:event_btn_resetActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -1381,7 +1926,7 @@ public class Queens extends javax.swing.JFrame {
     private javax.swing.JButton H7;
     private javax.swing.JButton H8;
     private javax.swing.JButton btn_close_window;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_reset;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1394,6 +1939,8 @@ public class Queens extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1403,5 +1950,6 @@ public class Queens extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbl_remain_queens;
     // End of variables declaration//GEN-END:variables
 }
