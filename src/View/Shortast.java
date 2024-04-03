@@ -27,27 +27,132 @@ public class Shortast extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btn_close_window = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        CItyA = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        CItyA3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 19));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1019, 624));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Find Shortast Path");
+
+        btn_close_window.setBackground(new java.awt.Color(255, 128, 19));
+        btn_close_window.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/close.png"))); // NOI18N
+        btn_close_window.setBorder(null);
+        btn_close_window.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_close_windowActionPerformed(evt);
+            }
+        });
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        CItyA.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout CItyALayout = new javax.swing.GroupLayout(CItyA);
+        CItyA.setLayout(CItyALayout);
+        CItyALayout.setHorizontalGroup(
+            CItyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 147, Short.MAX_VALUE)
+        );
+        CItyALayout.setVerticalGroup(
+            CItyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 154, Short.MAX_VALUE)
+        );
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("City A");
+
+        CItyA3.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout CItyA3Layout = new javax.swing.GroupLayout(CItyA3);
+        CItyA3.setLayout(CItyA3Layout);
+        CItyA3Layout.setHorizontalGroup(
+            CItyA3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 147, Short.MAX_VALUE)
+        );
+        CItyA3Layout.setVerticalGroup(
+            CItyA3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 154, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(CItyA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CItyA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(609, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CItyA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CItyA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(428, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 875, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -55,7 +160,14 @@ public class Shortast extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
+        dispose();
+        Home h = new Home();
+        h.setVisible(true);
+    }//GEN-LAST:event_btn_close_windowActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,6 +205,14 @@ public class Shortast extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CItyA;
+    private javax.swing.JPanel CItyA1;
+    private javax.swing.JPanel CItyA2;
+    private javax.swing.JPanel CItyA3;
+    private javax.swing.JButton btn_close_window;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
