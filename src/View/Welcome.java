@@ -130,6 +130,11 @@ public class Welcome extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    public String returnPlayerName(){
+        return player_name;
+    }
+    
     private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn_close_windowActionPerformed
