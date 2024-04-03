@@ -344,6 +344,8 @@ public class TicTacToe extends javax.swing.JFrame {
 
     private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
         dispose();
+        Home h = new Home();
+        h.setVisible(true);
     }//GEN-LAST:event_btn_close_windowActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
