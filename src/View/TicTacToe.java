@@ -300,39 +300,46 @@ public class TicTacToe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1ActionPerformed
-        
+        A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_A1ActionPerformed
 
     private void A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2ActionPerformed
-        // TODO add your handling code here:
+        A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_A2ActionPerformed
 
     private void A3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3ActionPerformed
         // TODO add your handling code here:
+        A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_A3ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
+        B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code here:
+        B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
+        B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_B2ActionPerformed
 
     private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
         // TODO add your handling code here:
+        C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_C1ActionPerformed
 
     private void C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C3ActionPerformed
         // TODO add your handling code here:
+        C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_C3ActionPerformed
 
     private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
         // TODO add your handling code here:
+        C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
     }//GEN-LAST:event_C2ActionPerformed
 
     private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
@@ -342,8 +349,8 @@ public class TicTacToe extends javax.swing.JFrame {
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        Queens qu = new Queens();
-        qu.setVisible(true);
+        TicTacToe ttt = new TicTacToe();
+        ttt.setVisible(true);
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
