@@ -1065,6 +1065,7 @@ public class Queens extends javax.swing.JFrame {
             B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1076,6 +1077,7 @@ public class Queens extends javax.swing.JFrame {
             A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1087,6 +1089,7 @@ public class Queens extends javax.swing.JFrame {
             D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1098,6 +1101,7 @@ public class Queens extends javax.swing.JFrame {
             C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1109,6 +1113,7 @@ public class Queens extends javax.swing.JFrame {
             F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1120,6 +1125,7 @@ public class Queens extends javax.swing.JFrame {
             E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1131,6 +1137,7 @@ public class Queens extends javax.swing.JFrame {
             H1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1142,6 +1149,7 @@ public class Queens extends javax.swing.JFrame {
             G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G1.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1153,6 +1161,7 @@ public class Queens extends javax.swing.JFrame {
             B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1165,6 +1174,7 @@ public class Queens extends javax.swing.JFrame {
             A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1177,6 +1187,7 @@ public class Queens extends javax.swing.JFrame {
             D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1189,6 +1200,7 @@ public class Queens extends javax.swing.JFrame {
             C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1200,6 +1212,7 @@ public class Queens extends javax.swing.JFrame {
             F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1212,6 +1225,7 @@ public class Queens extends javax.swing.JFrame {
             E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1224,6 +1238,7 @@ public class Queens extends javax.swing.JFrame {
             H2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1236,6 +1251,7 @@ public class Queens extends javax.swing.JFrame {
             G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G2.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1248,6 +1264,7 @@ public class Queens extends javax.swing.JFrame {
             G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1260,6 +1277,7 @@ public class Queens extends javax.swing.JFrame {
             B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1272,6 +1290,7 @@ public class Queens extends javax.swing.JFrame {
             F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1284,6 +1303,7 @@ public class Queens extends javax.swing.JFrame {
             D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1296,6 +1316,7 @@ public class Queens extends javax.swing.JFrame {
             A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1308,6 +1329,7 @@ public class Queens extends javax.swing.JFrame {
             E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1320,6 +1342,7 @@ public class Queens extends javax.swing.JFrame {
             C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1332,6 +1355,7 @@ public class Queens extends javax.swing.JFrame {
             H3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H3.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1344,6 +1368,7 @@ public class Queens extends javax.swing.JFrame {
             E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1356,6 +1381,7 @@ public class Queens extends javax.swing.JFrame {
             F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1368,6 +1394,7 @@ public class Queens extends javax.swing.JFrame {
             H4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1380,6 +1407,7 @@ public class Queens extends javax.swing.JFrame {
             C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1392,6 +1420,7 @@ public class Queens extends javax.swing.JFrame {
             G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1405,6 +1434,7 @@ public class Queens extends javax.swing.JFrame {
             A4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1417,6 +1447,7 @@ public class Queens extends javax.swing.JFrame {
             B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1429,6 +1460,7 @@ public class Queens extends javax.swing.JFrame {
             D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D4.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1441,6 +1473,7 @@ public class Queens extends javax.swing.JFrame {
             B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1453,6 +1486,7 @@ public class Queens extends javax.swing.JFrame {
             A5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1465,6 +1499,7 @@ public class Queens extends javax.swing.JFrame {
             D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1477,6 +1512,7 @@ public class Queens extends javax.swing.JFrame {
             C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1489,6 +1525,7 @@ public class Queens extends javax.swing.JFrame {
             F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1501,6 +1538,7 @@ public class Queens extends javax.swing.JFrame {
             E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1513,6 +1551,7 @@ public class Queens extends javax.swing.JFrame {
             H5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1525,6 +1564,7 @@ public class Queens extends javax.swing.JFrame {
             G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G5.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1537,6 +1577,7 @@ public class Queens extends javax.swing.JFrame {
             B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1549,6 +1590,7 @@ public class Queens extends javax.swing.JFrame {
             A6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1561,6 +1603,7 @@ public class Queens extends javax.swing.JFrame {
             D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1573,6 +1616,7 @@ public class Queens extends javax.swing.JFrame {
             C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1585,6 +1629,7 @@ public class Queens extends javax.swing.JFrame {
             F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1597,6 +1642,7 @@ public class Queens extends javax.swing.JFrame {
             E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1609,6 +1655,7 @@ public class Queens extends javax.swing.JFrame {
             H6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1621,6 +1668,7 @@ public class Queens extends javax.swing.JFrame {
             G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G6.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1633,6 +1681,7 @@ public class Queens extends javax.swing.JFrame {
             G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1645,6 +1694,7 @@ public class Queens extends javax.swing.JFrame {
             B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1657,6 +1707,7 @@ public class Queens extends javax.swing.JFrame {
             F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1669,6 +1720,7 @@ public class Queens extends javax.swing.JFrame {
             D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1681,6 +1733,7 @@ public class Queens extends javax.swing.JFrame {
             A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1693,6 +1746,7 @@ public class Queens extends javax.swing.JFrame {
             E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1705,6 +1759,7 @@ public class Queens extends javax.swing.JFrame {
             C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1717,6 +1772,7 @@ public class Queens extends javax.swing.JFrame {
             H7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H7.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1729,6 +1785,7 @@ public class Queens extends javax.swing.JFrame {
             E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            E8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1741,6 +1798,7 @@ public class Queens extends javax.swing.JFrame {
             F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            F8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1753,6 +1811,7 @@ public class Queens extends javax.swing.JFrame {
             H8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            H8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1765,6 +1824,7 @@ public class Queens extends javax.swing.JFrame {
             C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            C8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1777,6 +1837,7 @@ public class Queens extends javax.swing.JFrame {
             G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            G8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1789,6 +1850,7 @@ public class Queens extends javax.swing.JFrame {
             A8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            A8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1801,6 +1863,7 @@ public class Queens extends javax.swing.JFrame {
             B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            B8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
@@ -1813,6 +1876,7 @@ public class Queens extends javax.swing.JFrame {
             D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            D8.setEnabled(false);
         }else{
             InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
             inv.setVisible(true);
