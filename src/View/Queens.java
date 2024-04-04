@@ -4,6 +4,8 @@
  */
 package View;
 
+import Control.QueensControl;
+
 /**
  *
  * @author rames
@@ -13,6 +15,16 @@ public class Queens extends javax.swing.JFrame {
     /**
      * Creates new form Queens
      */
+    int[][] chessBoard = {
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0} };
+    QueensControl obj = new QueensControl();
     int remaining_queens = 8;
     
     public Queens() {
@@ -1065,9 +1077,16 @@ public class Queens extends javax.swing.JFrame {
             B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B1ActionPerformed
 
@@ -1076,9 +1095,16 @@ public class Queens extends javax.swing.JFrame {
             A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A1ActionPerformed
 
@@ -1087,9 +1113,16 @@ public class Queens extends javax.swing.JFrame {
             D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D1ActionPerformed
 
@@ -1098,9 +1131,16 @@ public class Queens extends javax.swing.JFrame {
             C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C1ActionPerformed
 
@@ -1109,9 +1149,16 @@ public class Queens extends javax.swing.JFrame {
             F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F1ActionPerformed
 
@@ -1120,9 +1167,16 @@ public class Queens extends javax.swing.JFrame {
             E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E1ActionPerformed
 
@@ -1131,9 +1185,16 @@ public class Queens extends javax.swing.JFrame {
             H1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H1ActionPerformed
 
@@ -1142,9 +1203,16 @@ public class Queens extends javax.swing.JFrame {
             G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[0][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G1ActionPerformed
 
@@ -1153,9 +1221,16 @@ public class Queens extends javax.swing.JFrame {
             B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B2ActionPerformed
 
@@ -1165,9 +1240,16 @@ public class Queens extends javax.swing.JFrame {
             A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A2ActionPerformed
 
@@ -1177,9 +1259,16 @@ public class Queens extends javax.swing.JFrame {
             D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D2ActionPerformed
 
@@ -1189,9 +1278,16 @@ public class Queens extends javax.swing.JFrame {
             C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C2ActionPerformed
 
@@ -1200,9 +1296,16 @@ public class Queens extends javax.swing.JFrame {
             F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F2ActionPerformed
 
@@ -1212,9 +1315,16 @@ public class Queens extends javax.swing.JFrame {
             E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E2ActionPerformed
 
@@ -1224,9 +1334,16 @@ public class Queens extends javax.swing.JFrame {
             H2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H2ActionPerformed
 
@@ -1236,9 +1353,16 @@ public class Queens extends javax.swing.JFrame {
             G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[1][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G2ActionPerformed
 
@@ -1248,9 +1372,16 @@ public class Queens extends javax.swing.JFrame {
             G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G3ActionPerformed
 
@@ -1260,9 +1391,16 @@ public class Queens extends javax.swing.JFrame {
             B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B3ActionPerformed
 
@@ -1272,9 +1410,16 @@ public class Queens extends javax.swing.JFrame {
             F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F3ActionPerformed
 
@@ -1284,9 +1429,16 @@ public class Queens extends javax.swing.JFrame {
             D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D3ActionPerformed
 
@@ -1296,9 +1448,16 @@ public class Queens extends javax.swing.JFrame {
             A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A3ActionPerformed
 
@@ -1308,9 +1467,16 @@ public class Queens extends javax.swing.JFrame {
             E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E3ActionPerformed
 
@@ -1320,9 +1486,16 @@ public class Queens extends javax.swing.JFrame {
             C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C3ActionPerformed
 
@@ -1332,9 +1505,16 @@ public class Queens extends javax.swing.JFrame {
             H3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[2][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H3ActionPerformed
 
@@ -1344,9 +1524,16 @@ public class Queens extends javax.swing.JFrame {
             E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E4ActionPerformed
 
@@ -1356,9 +1543,16 @@ public class Queens extends javax.swing.JFrame {
             F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F4ActionPerformed
 
@@ -1368,9 +1562,16 @@ public class Queens extends javax.swing.JFrame {
             H4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H4ActionPerformed
 
@@ -1380,9 +1581,16 @@ public class Queens extends javax.swing.JFrame {
             C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C4ActionPerformed
 
@@ -1392,9 +1600,16 @@ public class Queens extends javax.swing.JFrame {
             G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
         
     }//GEN-LAST:event_G4ActionPerformed
@@ -1405,9 +1620,16 @@ public class Queens extends javax.swing.JFrame {
             A4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A4ActionPerformed
 
@@ -1417,9 +1639,16 @@ public class Queens extends javax.swing.JFrame {
             B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B4ActionPerformed
 
@@ -1429,9 +1658,16 @@ public class Queens extends javax.swing.JFrame {
             D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[3][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D4ActionPerformed
 
@@ -1441,9 +1677,16 @@ public class Queens extends javax.swing.JFrame {
             B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B5ActionPerformed
 
@@ -1453,9 +1696,16 @@ public class Queens extends javax.swing.JFrame {
             A5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A5ActionPerformed
 
@@ -1465,9 +1715,16 @@ public class Queens extends javax.swing.JFrame {
             D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D5ActionPerformed
 
@@ -1477,9 +1734,16 @@ public class Queens extends javax.swing.JFrame {
             C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C5ActionPerformed
 
@@ -1489,9 +1753,16 @@ public class Queens extends javax.swing.JFrame {
             F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F5ActionPerformed
 
@@ -1501,9 +1772,16 @@ public class Queens extends javax.swing.JFrame {
             E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E5ActionPerformed
 
@@ -1513,9 +1791,16 @@ public class Queens extends javax.swing.JFrame {
             H5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H5ActionPerformed
 
@@ -1525,9 +1810,16 @@ public class Queens extends javax.swing.JFrame {
             G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[4][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G5ActionPerformed
 
@@ -1537,9 +1829,16 @@ public class Queens extends javax.swing.JFrame {
             B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B6ActionPerformed
 
@@ -1549,9 +1848,16 @@ public class Queens extends javax.swing.JFrame {
             A6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A6ActionPerformed
 
@@ -1561,9 +1867,16 @@ public class Queens extends javax.swing.JFrame {
             D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D6ActionPerformed
 
@@ -1573,9 +1886,16 @@ public class Queens extends javax.swing.JFrame {
             C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C6ActionPerformed
 
@@ -1585,9 +1905,16 @@ public class Queens extends javax.swing.JFrame {
             F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F6ActionPerformed
 
@@ -1597,9 +1924,16 @@ public class Queens extends javax.swing.JFrame {
             E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E6ActionPerformed
 
@@ -1609,9 +1943,16 @@ public class Queens extends javax.swing.JFrame {
             H6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H6ActionPerformed
 
@@ -1621,9 +1962,16 @@ public class Queens extends javax.swing.JFrame {
             G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[5][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G6ActionPerformed
 
@@ -1633,9 +1981,16 @@ public class Queens extends javax.swing.JFrame {
             G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G7ActionPerformed
 
@@ -1645,9 +2000,16 @@ public class Queens extends javax.swing.JFrame {
             B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B7ActionPerformed
 
@@ -1657,9 +2019,16 @@ public class Queens extends javax.swing.JFrame {
             F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F7ActionPerformed
 
@@ -1669,9 +2038,16 @@ public class Queens extends javax.swing.JFrame {
             D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D7ActionPerformed
 
@@ -1681,9 +2057,16 @@ public class Queens extends javax.swing.JFrame {
             A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A7ActionPerformed
 
@@ -1693,9 +2076,16 @@ public class Queens extends javax.swing.JFrame {
             E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E7ActionPerformed
 
@@ -1705,9 +2095,16 @@ public class Queens extends javax.swing.JFrame {
             C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C7ActionPerformed
 
@@ -1717,9 +2114,16 @@ public class Queens extends javax.swing.JFrame {
             H7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[6][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H7ActionPerformed
 
@@ -1729,9 +2133,16 @@ public class Queens extends javax.swing.JFrame {
             E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][4] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_E8ActionPerformed
 
@@ -1741,9 +2152,16 @@ public class Queens extends javax.swing.JFrame {
             F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][5] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_F8ActionPerformed
 
@@ -1753,9 +2171,16 @@ public class Queens extends javax.swing.JFrame {
             H8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][7] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_H8ActionPerformed
 
@@ -1765,9 +2190,16 @@ public class Queens extends javax.swing.JFrame {
             C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][2] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_C8ActionPerformed
 
@@ -1777,9 +2209,16 @@ public class Queens extends javax.swing.JFrame {
             G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][6] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_G8ActionPerformed
 
@@ -1789,9 +2228,16 @@ public class Queens extends javax.swing.JFrame {
             A8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][0] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_A8ActionPerformed
 
@@ -1801,9 +2247,16 @@ public class Queens extends javax.swing.JFrame {
             B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][1] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_B8ActionPerformed
 
@@ -1813,9 +2266,16 @@ public class Queens extends javax.swing.JFrame {
             D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/queen.png")));
             remaining_queens = remaining_queens - 1;
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
+            chessBoard[7][3] = 1;
         }else{
-            InvalidOperation inv = new InvalidOperation("Invalid Operation : All 8 Queens are used");
-            inv.setVisible(true);
+            if(obj.checkSafe(chessBoard) == true){
+                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
+                inv.setVisible(true);
+            }
+            else{
+                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
+                inv.setVisible(true);
+            }
         }
     }//GEN-LAST:event_D8ActionPerformed
 
