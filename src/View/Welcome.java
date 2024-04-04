@@ -180,6 +180,8 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
     }
+    
+    int t;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_close_window;
