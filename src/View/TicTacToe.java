@@ -368,6 +368,9 @@ public class TicTacToe extends javax.swing.JFrame {
             A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -381,6 +384,9 @@ public class TicTacToe extends javax.swing.JFrame {
             A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -394,6 +400,9 @@ public class TicTacToe extends javax.swing.JFrame {
             B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -407,6 +416,9 @@ public class TicTacToe extends javax.swing.JFrame {
             B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -420,6 +432,9 @@ public class TicTacToe extends javax.swing.JFrame {
             B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -432,6 +447,9 @@ public class TicTacToe extends javax.swing.JFrame {
             C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -444,6 +462,9 @@ public class TicTacToe extends javax.swing.JFrame {
             C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;
@@ -456,6 +477,9 @@ public class TicTacToe extends javax.swing.JFrame {
             C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
             computeNextMove();
             count++;
+            if(count == 3){
+                checkWin();
+            }
         }
         else{
             // TODO : Display a msg box saying "there a value here!" ;

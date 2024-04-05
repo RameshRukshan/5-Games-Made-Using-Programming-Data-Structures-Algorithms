@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Main;
-//import View.Home;
-//import Control.QueensControl;
+import View.Home;
+import Control.QueensControl;
 import Control.TicTacToeControl;
 /**
  *
