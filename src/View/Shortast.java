@@ -27,15 +27,7 @@ public class Shortast extends javax.swing.JFrame {
      * Creates new form Shortast
      */
     
-    int btn_a = 0;
-    int btn_b = 0;
-    int btn_c = 0;
-    int btn_d = 0;
-    int btn_e = 0;
-    int btn_f = 0;
-    int btn_g = 0;
-    int btn_h = 0;
-    int btn_i = 0;
+    int mappath [] = {0,0,0,0,0,0,0,0};
     
     public Shortast() {
         initComponents();
@@ -580,7 +572,7 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
         // TODO add your handling code here:
         btn_2.setEnabled(false);
-        btn_b = 1;
+        
     }//GEN-LAST:event_btn_2ActionPerformed
 
     private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
@@ -592,7 +584,7 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
         // TODO add your handling code here:
         btn_1.setEnabled(false);
-        btn_a = 1;
+        
         
         Graphics2D g2d = (Graphics2D)map.getGraphics();
         Stroke stk = new BasicStroke(3f);   //define thickness
@@ -636,43 +628,43 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
         // TODO add your handling code here:
         btn_3.setEnabled(false);
-        btn_c = 1;
+        
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
         // TODO add your handling code here:
         btn_4.setEnabled(false);
-        btn_d = 1;
+        
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
         // TODO add your handling code here:
         btn_5.setEnabled(false);
-        btn_e = 1;
+        
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
         // TODO add your handling code here:
         btn_6.setEnabled(false);
-        btn_f = 1;
+        
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
         // TODO add your handling code here:
         btn_7.setEnabled(false);
-        btn_g = 1;
+        
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
         // TODO add your handling code here:
         btn_8.setEnabled(false);
-        btn_h = 1;
+        
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
         // TODO add your handling code here:
         btn_9.setEnabled(false);
-        btn_i = 1;
+        
     }//GEN-LAST:event_btn_9ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
