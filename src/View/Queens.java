@@ -37,9 +37,11 @@ public class Queens extends javax.swing.JFrame {
         if(remaining_queens == 0 && obj.checkSafe(chessBoard) == true){
             ValidAnswer vans = new ValidAnswer();
             vans.setVisible(true);
+            
         }else if(remaining_queens == 0 && obj.checkSafe(chessBoard) == false){
             InvalidAnswer invAns =  new InvalidAnswer();
             invAns.setVisible(true);
+            
         }else if(remaining_queens == 0){
             InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
             inv.setVisible(true);
@@ -1092,14 +1094,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1112,14 +1108,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1132,14 +1122,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1152,14 +1136,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1172,14 +1150,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1192,14 +1164,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1212,14 +1178,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1232,14 +1192,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[0][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1252,14 +1206,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1273,14 +1221,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1294,14 +1236,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1315,14 +1251,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1335,14 +1265,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1356,14 +1280,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1377,14 +1295,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1398,14 +1310,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[1][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1419,14 +1325,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1440,14 +1340,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1461,14 +1355,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1482,14 +1370,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1503,14 +1385,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1524,14 +1400,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1545,14 +1415,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1566,14 +1430,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[2][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1587,14 +1445,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1608,14 +1460,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1629,14 +1475,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1650,14 +1490,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1671,14 +1505,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1692,14 +1520,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1713,14 +1535,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1734,14 +1550,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[3][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1755,14 +1565,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1776,14 +1580,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1797,14 +1595,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1818,14 +1610,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1839,14 +1625,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1860,14 +1640,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1881,14 +1655,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1902,14 +1670,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[4][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1923,14 +1685,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1944,14 +1700,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1965,14 +1715,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -1986,14 +1730,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2007,14 +1745,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2028,14 +1760,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2049,14 +1775,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2070,14 +1790,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[5][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2091,14 +1805,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2112,14 +1820,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2133,14 +1835,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2154,14 +1850,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2175,14 +1865,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2196,14 +1880,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2217,14 +1895,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2238,14 +1910,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[6][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2259,14 +1925,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][4] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2280,14 +1940,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][5] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2301,14 +1955,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][7] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2322,14 +1970,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][2] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2343,14 +1985,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][6] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2364,14 +2000,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][0] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2385,14 +2015,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][1] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
@@ -2406,14 +2030,8 @@ public class Queens extends javax.swing.JFrame {
             lbl_remain_queens.setText(String.valueOf(remaining_queens));
             chessBoard[7][3] = 1;
         }else{
-            if(obj.checkSafe(chessBoard) == true){
-                InvalidOperation inv = new InvalidOperation("valid Operation : valid answer");
-                inv.setVisible(true);
-            }
-            else{
-                InvalidOperation inv = new InvalidOperation("Invalid Operation : invalid answer");
-                inv.setVisible(true);
-            }
+            InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
+            inv.setVisible(true);
         }
         
         checkValidity();
