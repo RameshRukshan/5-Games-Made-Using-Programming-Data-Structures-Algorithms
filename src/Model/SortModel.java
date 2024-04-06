@@ -27,7 +27,7 @@ public class SortModel {
 
         numbers = generateRandomNumbers();
         Map<String, Long> sortTimes = measureSortTimes(numbers);
-        Model.Database.D_Sort_saveSortTimes(sortTimes);
+        Model.Database.D_Sort_saveSortTimes(playername,sortTimes);
         //saveSortTimesToDatabase(sortTimes);   
     }
     
