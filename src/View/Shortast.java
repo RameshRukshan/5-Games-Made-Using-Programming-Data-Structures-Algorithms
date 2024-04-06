@@ -17,21 +17,75 @@ import java.text.AttributedCharacterIterator;
 import sun.java2d.loops.DrawLine;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
+import java.util.*;
+
+import Control.ShortestDisControl;
 /**
  *
  * @author rames
  */
 public class Shortast extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Shortast
-     */
-    
-    int mappath [] = {0,0,0,0,0,0,0,0};
+    //int mappath [] = {0,0,0,0,0,0,0,0};
     
     public Shortast() {
         initComponents();
     }
+    ShortestDisControl obj = new ShortestDisControl();
+    
+    int[] playerpath; // Array which stores the player path
+    int verticesCount = 0;
+    int[][] newmap = {
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0} };
+    
+    Random ne = new Random();
+    
+    public void generateDistance(){
+        for(int i = 0; i < newmap.length; i++){
+            for(int s = 0; s < newmap[i].length; s++){
+                if(i == s){
+                    newmap[i][s] = 0;
+                }
+                else if(i < s){
+                    newmap[i][s] = ne.nextInt(46) + 5;
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+    }
+    
+    public void playerPath(int vertice){
+        if(verticesCount <= 9){
+            playerpath[verticesCount] = vertice;
+            verticesCount++;
+        }
+        else{
+            // print a dialog box saying have reached choosing maximum vertices or something 
+        }
+    }
+    
+    public void calculateShortestDistance(){ //make this method to get call when use clicks the check button!
+        obj.shortestDistnace(newmap);
+        Integer[] playerPathInteger = Arrays.stream(playerpath).boxed().toArray(Integer[]::new);
+        List<Integer> list = Arrays.asList(playerPathInteger);
+        if(obj.checkPlayerAnswer(list) == true){
+            // show answer is correct
+        }
+        else{
+            // show answer is incorrect
+        }
+    }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.

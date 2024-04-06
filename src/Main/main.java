@@ -6,6 +6,11 @@ package Main;
 import View.Home;
 import Control.QueensControl;
 import Control.TicTacToeControl;
+import Control.ShortestDisControl;
+import Model.ShortestDisModel;
+import java.util.List;
+import java.util.Random;
+
 /**
  *
  * @author chiran
@@ -30,6 +35,7 @@ public class main {
         else{
             System.out.println("--- Invalid Solution ---");
         }*/
+        
         int[][] tictactoeBoard = {
                         {1,0,0},
                         {0,1,0},
