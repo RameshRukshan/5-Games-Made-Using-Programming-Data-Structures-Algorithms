@@ -17,12 +17,12 @@ This project consists of a collection of five interactive games developed as par
 **Installation Instructions:**
 1. Clone the repository to your local machine using the following command:
    ```
-   git clone https://github.com/your-username/programming-data-structures-games.git
+   git clone https://github.com/your-username/5-Games-Made-Using-Programming-Data-Structures-Algorithms
    ```
 
 2. Navigate to the project directory:
    ```
-   cd programming-data-structures-games
+   cd 5-Games-Made-Using-Programming-Data-Structures-Algorithms
    ```
 
 3. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, etc.).
