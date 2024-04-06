@@ -3,6 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Control.SortControl;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
 /**
  *
@@ -10,11 +18,16 @@ package View;
  */
 public class Sort extends javax.swing.JFrame {
 
+     public int randomIndex1,randomIndex2;
+     public int randomNumber1,randomNumber2;
+     public int guessedIndex1,guessedIndex2;
+     public boolean resstatus1,resstatus2;
     /**
      * Creates new form Sort
      */
     public Sort() {
         initComponents();
+       
     }
 
     /**
@@ -42,9 +55,11 @@ public class Sort extends javax.swing.JFrame {
         btn_start = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        txt_PlayerName = new javax.swing.JTextField();
+        lblRandomVal1 = new javax.swing.JLabel();
+        txt_Playerresponse1 = new javax.swing.JTextField();
         btn_check_answer = new javax.swing.JButton();
+        txt_Playerresponse2 = new javax.swing.JTextField();
+        lblRandomVal2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -76,11 +91,9 @@ public class Sort extends javax.swing.JFrame {
         jLabel11.setText("Value :");
 
         lbl_index.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lbl_index.setForeground(new java.awt.Color(0, 0, 0));
         lbl_index.setText("N/A");
 
         lbl_value.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lbl_value.setForeground(new java.awt.Color(0, 0, 0));
         lbl_value.setText("N/A");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -93,13 +106,12 @@ public class Sort extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(lbl_index, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(144, 144, 144))
+                        .addComponent(lbl_index, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
-                        .addComponent(lbl_value, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(lbl_value, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,16 +128,12 @@ public class Sort extends javax.swing.JFrame {
         );
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Remember the Indexes and Values");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Values And Indexes");
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-28-info (1).gif"))); // NOI18N
         jButton2.setText("Info");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +144,6 @@ public class Sort extends javax.swing.JFrame {
 
         btn_reset.setBackground(new java.awt.Color(255, 51, 51));
         btn_reset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_reset.setForeground(new java.awt.Color(0, 0, 0));
         btn_reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-18-autorenew (1).gif"))); // NOI18N
         btn_reset.setText("Restart");
         btn_reset.addActionListener(new java.awt.event.ActionListener() {
@@ -160,18 +167,15 @@ public class Sort extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Enter the Index of Value ");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("N/A");
+        lblRandomVal1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblRandomVal1.setText("N/A");
 
-        txt_PlayerName.setBackground(new java.awt.Color(204, 204, 204));
-        txt_PlayerName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txt_PlayerName.setForeground(new java.awt.Color(0, 0, 0));
-        txt_PlayerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_PlayerName.setMargin(new java.awt.Insets(6, 6, 6, 6));
+        txt_Playerresponse1.setBackground(new java.awt.Color(204, 204, 204));
+        txt_Playerresponse1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        txt_Playerresponse1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_Playerresponse1.setMargin(new java.awt.Insets(6, 6, 6, 6));
 
         btn_check_answer.setBackground(new java.awt.Color(255, 128, 19));
         btn_check_answer.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -183,36 +187,55 @@ public class Sort extends javax.swing.JFrame {
             }
         });
 
+        txt_Playerresponse2.setBackground(new java.awt.Color(204, 204, 204));
+        txt_Playerresponse2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        txt_Playerresponse2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        lblRandomVal2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblRandomVal2.setText("N/A");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(245, 245, 245))
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel13))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_PlayerName)
-                            .addComponent(btn_check_answer, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(30, 30, 30)
+                        .addComponent(btn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(lblRandomVal1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblRandomVal2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(txt_Playerresponse1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(txt_Playerresponse2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(34, 34, 34))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
+                .addComponent(jLabel13)
+                .addGap(8, 8, 8)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_PlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(lblRandomVal1)
+                    .addComponent(lblRandomVal2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_Playerresponse1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_Playerresponse2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(btn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -236,7 +259,7 @@ public class Sort extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(138, 138, 138))
-                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -271,15 +294,13 @@ public class Sort extends javax.swing.JFrame {
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel18)
-                        .addGap(20, 20, 20))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(36, Short.MAX_VALUE))))
+                        .addGap(0, 79, Short.MAX_VALUE)
+                        .addComponent(jLabel18))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -315,15 +336,88 @@ public class Sort extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
-        // TODO add your handling code here:
+     SortControl.C_Sort_number();
+    int values[] = SortControl.C_Sort_displayValues();
+    Arrays.sort(values);
+
+    int delay = 2000; // Delay in milliseconds
+    AtomicInteger index = new AtomicInteger(0); // Using AtomicInteger to make it effectively final
+
+    Timer timer = new Timer(delay, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (index.get() < Math.min(20, values.length)) {
+                lbl_index.setText("" + index.get());
+                lbl_value.setText("" + values[index.get()]);
+                index.incrementAndGet();
+            } else {
+                ((Timer) e.getSource()).stop(); // Stop the timer when all elements are displayed
+                // Print sorted values in the console
+                System.out.println("Sorted Values:");
+                for (int i = 0; i < 20; i++) {
+                    System.out.println("Index " + i + ": " + values[i]);
+                }
+                // Select two random numbers from the displayed values
+                 Random random = new Random();
+                 randomIndex1 = random.nextInt(Math.min(20, values.length));
+                 randomIndex2 = random.nextInt(Math.min(20, values.length));
+                 randomNumber1 = values[randomIndex1];
+                 randomNumber2 = values[randomIndex2];
+                // Display the selected random numbers in labels
+                lblRandomVal1.setText("" + randomNumber1);
+                lblRandomVal2.setText("" + randomNumber2);
+                
+            }
+        }
+    });
+    timer.start(); // Start the timer
     }//GEN-LAST:event_btn_startActionPerformed
 
     private void btn_check_answerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_check_answerActionPerformed
-        this.dispose();
-        Queens game_queens = new Queens();
-        game_queens.setVisible(true);
+        
+         String responseIndex1 =txt_Playerresponse1.getText();
+         String responseIndex2 =txt_Playerresponse2.getText();
+        try {
+         guessedIndex1 = Integer.parseInt(responseIndex1);
+         guessedIndex2 = Integer.parseInt(responseIndex2);
+        if (guessedIndex1 == randomIndex1 && guessedIndex2 == randomIndex2 ) {
+            resstatus1=true;
+            resstatus2=true;
+            // Perform action if the guess is correct
+            // For example, display a message
+            JOptionPane.showMessageDialog(this, "Congratulations! Your both guess is correct.");
+        } else if(guessedIndex1 == randomIndex1 && guessedIndex2 != randomIndex2 ) {
+             resstatus1=true;
+             resstatus2=false;
+            // Perform action if the guess is incorrect
+            // For example, display a message
+            JOptionPane.showMessageDialog(this, "Sorry, your second guess is incorrect.");
+        }
+        else if(guessedIndex2 != randomIndex2 && guessedIndex2 == randomIndex2 ) {
+            resstatus1=false;
+             resstatus2=true;
+            // Perform action if the guess is incorrect
+            // For example, display a message
+            JOptionPane.showMessageDialog(this, "Sorry, your first guess is incorrect.");
+        }
+        else {
+             resstatus1=false;
+             resstatus2=false;
+            // Perform action if the guess is incorrect
+            // For example, display a message
+            JOptionPane.showMessageDialog(this, "Sorry, your both guesses is incorrect.");
+        }
+    } catch (NumberFormatException e) {
+        // Handle the case where the input is not a valid integer
+        JOptionPane.showMessageDialog(this, "Please enter a valid integer.");
+    }
+     
+        boolean values = SortControl.C_Sort_saveResponse(guessedIndex1,guessedIndex2,resstatus1,resstatus2);
+        
+      
     }//GEN-LAST:event_btn_check_answerActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -370,14 +464,16 @@ public class Sort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblRandomVal1;
+    private javax.swing.JLabel lblRandomVal2;
     private javax.swing.JLabel lbl_index;
     private javax.swing.JLabel lbl_value;
-    private javax.swing.JTextField txt_PlayerName;
+    private javax.swing.JTextField txt_Playerresponse1;
+    private javax.swing.JTextField txt_Playerresponse2;
     // End of variables declaration//GEN-END:variables
 }
