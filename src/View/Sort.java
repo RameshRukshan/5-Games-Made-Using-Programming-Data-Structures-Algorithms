@@ -385,7 +385,8 @@ public class Sort extends javax.swing.JFrame {
             resstatus2=true;
             // Perform action if the guess is correct
             // For example, display a message
-            JOptionPane.showMessageDialog(this, "Congratulations! Your both guess is correct.");
+            ValidAnswer vala = new ValidAnswer();
+            vala.setVisible(true);
         } else if(guessedIndex1 == randomIndex1 && guessedIndex2 != randomIndex2 ) {
              resstatus1=true;
              resstatus2=false;
@@ -405,7 +406,8 @@ public class Sort extends javax.swing.JFrame {
              resstatus2=false;
             // Perform action if the guess is incorrect
             // For example, display a message
-            JOptionPane.showMessageDialog(this, "Sorry, your both guesses is incorrect.");
+            InvalidAnswer inva = new InvalidAnswer();
+            inva.setVisible(true);
         }
     } catch (NumberFormatException e) {
         // Handle the case where the input is not a valid integer
