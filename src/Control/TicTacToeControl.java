@@ -64,14 +64,14 @@ public class TicTacToeControl {
         if(board[0][0] == 1 && board[1][1] == 1 && board[2][2] == 1){
             return "player";
         }
-        if(board[0][2] == 1 && board[1][1] == 1 && board[2][1] == 1){
+        if(board[0][2] == 1 && board[1][1] == 1 && board[2][0] == 1){
             return "player";
         }
         
         if(board[0][0] == 1 && board[1][1] == 1 && board[2][2] == 1){
             return "computer";
         }
-        if(board[0][2] == 1 && board[1][1] == 1 && board[2][1] == 1){
+        if(board[0][2] == 1 && board[1][1] == 1 && board[2][0] == 1){
             return "computer";
         }
         return "draw";
