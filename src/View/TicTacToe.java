@@ -26,6 +26,15 @@ public class TicTacToe extends javax.swing.JFrame {
     public void checkWin(){
         TicTacToeControl obj = new TicTacToeControl();
         String winner = obj.evaluvateTheBoard(tictactoeBoard);
+        
+        if(winner == "player"){
+            ValidAnswer vala = new ValidAnswer();
+            vala.setVisible(true);
+        }else{
+            InvalidAnswer inva = new InvalidAnswer();
+            inva.setVisible(true);
+        }
+        
         System.out.print(winner); // TDO MAke this an alert;
     }
     
