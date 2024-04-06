@@ -27,45 +27,54 @@ public class SortModel {
 
         numbers = generateRandomNumbers();
         Map<String, Long> sortTimes = measureSortTimes(numbers);
-        saveSortTimesToDatabase(sortTimes);   
+        Model.Database.D_Sort_saveSortTimes(sortTimes);
+        //saveSortTimesToDatabase(sortTimes);   
     }
     
+    //save player response to database
    public static boolean M_Sort_saveResponse(int guessedIndex1, int guessedIndex2, boolean resstatus1, boolean resstatus2) {
-    boolean success = false;
-    String status1,status2;
-    if (resstatus1) {
-        status1 = "true";
-    } else {
-        status1 = "false";
-    }
-
-    if (resstatus2) {
-        status2 = "true";
-    } else {
-        status2 = "false";
-    }
-    
-    String query = "INSERT INTO response_table (player_name, guessed_index1, guessed_index2, status1, status2) VALUES (?, ?, ?, ?, ?)";
-    
-    try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
-        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-        preparedStatement.setString(1, playername);
-        preparedStatement.setInt(2, guessedIndex1);
-        preparedStatement.setInt(3, guessedIndex2);
-        preparedStatement.setString(4, status1);
-        preparedStatement.setString(5, status2);
-        
-        int rowsAffected = preparedStatement.executeUpdate();
-        if (rowsAffected > 0) {
-            success = true;
-            System.out.println("Response saved for player: " + playername);
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    
+    String palyer_name=playername;
+    boolean success = Model.Database.D_Sort_saveResponse(palyer_name,guessedIndex1, guessedIndex2, resstatus1, resstatus2);
     return success;
-}
+    }
+   
+//    //save player response to database
+//   public static boolean M_Sort_saveResponse(int guessedIndex1, int guessedIndex2, boolean resstatus1, boolean resstatus2) {
+//    boolean success = false;
+//    String status1,status2;
+//    if (resstatus1) {
+//        status1 = "true";
+//    } else {
+//        status1 = "false";
+//    }
+//
+//    if (resstatus2) {
+//        status2 = "true";
+//    } else {
+//        status2 = "false";
+//    }
+//    
+//    String query = "INSERT INTO response_table (player_name, guessed_index1, guessed_index2, status1, status2) VALUES (?, ?, ?, ?, ?)";
+//    
+//    try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
+//        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//        preparedStatement.setString(1, playername);
+//        preparedStatement.setInt(2, guessedIndex1);
+//        preparedStatement.setInt(3, guessedIndex2);
+//        preparedStatement.setString(4, status1);
+//        preparedStatement.setString(5, status2);
+//        
+//        int rowsAffected = preparedStatement.executeUpdate();
+//        if (rowsAffected > 0) {
+//            success = true;
+//            System.out.println("Response saved for player: " + playername);
+//        }
+//    } catch (SQLException e) {
+//        e.printStackTrace();
+//    }
+//    
+//    return success;
+//}
 
     
     //get sorted values
@@ -105,33 +114,35 @@ public class SortModel {
         return endTime - startTime;
     }
 
-    private static void saveSortTimesToDatabase(Map<String, Long> sortTimes) {
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
-            for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
-                String PlayerName=playername;
-                String sortType = entry.getKey();
-                long timeTaken = entry.getValue();
-                String query = "INSERT INTO sort_times (playername,sort_type, time_taken) VALUES (?,?, ?)";
-                try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                    preparedStatement.setString(1, PlayerName);
-                    preparedStatement.setString(2, sortType);
-                    preparedStatement.setLong(3, timeTaken);
-                    preparedStatement.executeUpdate();
-                }
-            }
-            System.out.println("Sort times saved to the database.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+//    //save sort time to database
+//    private static void saveSortTimesToDatabase(Map<String, Long> sortTimes) {
+//        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+//            for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
+//                String PlayerName=playername;
+//                String sortType = entry.getKey();
+//                long timeTaken = entry.getValue();
+//                String query = "INSERT INTO sort_times (playername,sort_type, time_taken) VALUES (?,?, ?)";
+//                try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//                    preparedStatement.setString(1, PlayerName);
+//                    preparedStatement.setString(2, sortType);
+//                    preparedStatement.setLong(3, timeTaken);
+//                    preparedStatement.executeUpdate();
+//                }
+//            }
+//            System.out.println("Sort times saved to the database.");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
   
-
+ //sort interface
     private interface SortFunction {
         void sort(int[] numbers);
     }
 }
 
+//sorting algorithms include class
 class SortingAlgorithms {
 
  //bubble sort
@@ -149,6 +160,7 @@ class SortingAlgorithms {
         }
     }
 
+     //insertion sort
        public static void insertionSort(int[] numbers) {
         int n = numbers.length;
         for (int i = 1; i < n; ++i) {
@@ -162,6 +174,7 @@ class SortingAlgorithms {
         }
     }
 
+       //merge sort
     public static void mergeSort(int[] numbers) {
     mergeSortHelper(numbers, 0, numbers.length - 1);
    }
@@ -208,12 +221,14 @@ public static void merge(int[] numbers, int left, int middle, int right) {
     }
 }
 
+//radix sort
 public static void radixSort(int[] numbers) {
     int max = Arrays.stream(numbers).max().getAsInt();
     for (int exp = 1; max / exp > 0; exp *= 10)
         countingSort(numbers, exp);
 }
 
+//counting sort
 public static void countingSort(int[] numbers, int exp) {
     int n = numbers.length;
     int[] output = new int[n];
@@ -231,6 +246,7 @@ public static void countingSort(int[] numbers, int exp) {
         numbers[i] = output[i];
 }
 
+//shell sort
 public static void shellSort(int[] numbers) {
     int n = numbers.length;
     for (int gap = n / 2; gap > 0; gap /= 2) {
@@ -244,6 +260,7 @@ public static void shellSort(int[] numbers) {
     }
 }
 
+//quick sort
 public static void quickSort(int[] numbers) {
     quickSortHelper(numbers, 0, numbers.length - 1);
 }
@@ -273,6 +290,7 @@ public static int partition(int[] numbers, int low, int high) {
     return i + 1;
 }
 
+//tim sort
 public static void timSort(int[] numbers) {
     Arrays.sort(numbers);
 }

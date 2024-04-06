@@ -394,7 +394,7 @@ public class Sort extends javax.swing.JFrame {
             // For example, display a message
             JOptionPane.showMessageDialog(this, "Sorry, your second guess is incorrect.");
         }
-        else if(guessedIndex2 != randomIndex2 && guessedIndex2 == randomIndex2 ) {
+        else if(guessedIndex1 != randomIndex1 && guessedIndex2 == randomIndex2 ) {
             resstatus1=false;
              resstatus2=true;
             // Perform action if the guess is incorrect
