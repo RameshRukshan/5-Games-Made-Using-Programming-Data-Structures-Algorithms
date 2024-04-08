@@ -25,7 +25,7 @@ This project consists of a collection of five interactive games developed as par
    cd 5-Games-Made-Using-Programming-Data-Structures-Algorithms
    ```
 
-3. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse, etc.).
+3. Open the project in your preferred IDE (e.g., NetBeans, IntelliJ IDEA, Eclipse, etc.).
 
 4. Build and run the project.
 
