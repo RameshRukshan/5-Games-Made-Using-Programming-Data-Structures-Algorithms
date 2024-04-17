@@ -24,25 +24,36 @@ public class Database {
   
     //sort algorithm********************************************************************************************
     //save sort time to database
-    public static void D_Sort_saveSortTimes(Map<String, Long> sortTimes) {
-        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
-            for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
-                String PlayerName=playername;
-                String sortType = entry.getKey();
-                long timeTaken = entry.getValue();
-                String query = "INSERT INTO sort_times (playername,sort_type, time_taken) VALUES (?,?, ?)";
-                try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                    preparedStatement.setString(1, PlayerName);
-                    preparedStatement.setString(2, sortType);
-                    preparedStatement.setLong(3, timeTaken);
-                    preparedStatement.executeUpdate();
-                }
-            }
-            System.out.println("Sort times saved to the database.");
-        } catch (SQLException e) {
-            e.printStackTrace();
+public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sortTimes) {
+    try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+        StringBuilder columns = new StringBuilder("playername");
+        StringBuilder values = new StringBuilder("?");
+
+        for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
+            columns.append(", `").append(entry.getKey()).append("`");
+            values.append(", ?");
         }
+
+        String query = "INSERT INTO sort_times (" + columns + ") VALUES (" + values + ")";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, playerName);
+
+            int index = 2;
+            for (long time : sortTimes.values()) {
+                preparedStatement.setLong(index++, time);
+            }
+
+            preparedStatement.executeUpdate();
+        }
+
+        System.out.println("Sort times saved to the database for player: " + playerName);
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+}
+
+
     
         //save player response to database
         public static boolean D_Sort_saveResponse(String palyer_name,int guessedIndex1, int guessedIndex2, boolean resstatus1, boolean resstatus2) {
