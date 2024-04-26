@@ -4,6 +4,7 @@
  */
 package View;
 
+import Control.SearchControl;
 import java.util.Scanner;
 import java.util.Random;
 import javax.swing.JTextField;
@@ -335,38 +336,50 @@ public class SearchGameUI extends javax.swing.JFrame {
         // Validate user input and check if it matches the target index
         frame.jTextField1.addActionListener(e -> {
         //   String userChoice = scanner.nextLine().toUpperCase();
+        public boolean response=true;
         String userChoice = frame.jTextField1.getText().toUpperCase(); 
         switch (userChoice) {
             case "A":
                 if (optionIndices[0] == targetIndex) {
                     frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    response=true;
                 } else {
                     frame.jLabel12.setText("Sorry, wrong choice!");
+                    response=false;
                 }
                 break;
             case "B":
                 if (optionIndices[1] == targetIndex) {
                    frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                   response=true;
                 } else {
                     frame.jLabel12.setText("Sorry, wrong choice!");
+                    response=false;
                 }
                 break;
             case "C":
                 if (optionIndices[2] == targetIndex) {
                     frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    response=true;
                 } else {
                     frame.jLabel12.setText("Sorry, wrong choice!");
+                    response=false;
                 }
                 break;
             case "D":
                 if (optionIndices[3] == targetIndex) {
                    frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                   response=true;
                 } else {
                     frame.jLabel12.setText("Sorry, wrong choice!");
+                    response=false;
                 }
                 break;
             default:
               frame.jLabel12.setText("Invalid choice!");
+              response=false;
+              
+              SearchControl.C_SearchResponse(userChoice,targetIndex,response);//send the userresponces
               
               
         }
@@ -414,6 +427,8 @@ public class SearchGameUI extends javax.swing.JFrame {
         long jumpTime = endTime - startTime;
         long exponentialTime = endTime - startTime;
         long fibonacciTime = endTime - startTime;
+        
+        SearchControl.C_SearchTime(binaryTime,jumpTime,exponentialTime,fibonacciTime);
         
         long minTime = Math.min(Math.min(binaryTime, jumpTime), Math.min(exponentialTime, fibonacciTime));
         if (minTime == binaryTime) {

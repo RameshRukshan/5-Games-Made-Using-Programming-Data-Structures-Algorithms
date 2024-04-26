@@ -93,5 +93,45 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
          return success;
      }
 
+    public static void D_SearchTime(String playername, long binaryTime, long jumpTime, long exponentialTime, long fibonacciTime) {
+        String query = "INSERT INTO SearchTime_table (playername, binaryTime, jumpTime, exponentialTime, fibonacciTime) VALUES (?, ?, ?, ?, ?)";
+
+         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+             preparedStatement.setString(1, playername);
+             preparedStatement.setLong(2, binaryTime);
+             preparedStatement.setLong(3, jumpTime);
+             preparedStatement.setLong(4, exponentialTime);
+             preparedStatement.setLong(5, fibonacciTime);
+
+             int rowsAffected = preparedStatement.executeUpdate();
+             if (rowsAffected > 0) {
+                 System.out.println("Search Time saved for player: " + playername);
+             }
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+    }
+
+    static void D_SearchResponse(String playername, String userChoice, long targetIndex, boolean response) {
+        String query = "INSERT INTO SearchResponse_table (playername, userChoice, targetIndex, response) VALUES (?, ?, ?, ?)";
+
+         try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+             preparedStatement.setString(1, playername);
+             preparedStatement.setString(2, userChoice);
+             preparedStatement.setLong(3, targetIndex);
+             preparedStatement.setBoolean(4, response);
+           
+
+             int rowsAffected = preparedStatement.executeUpdate();
+             if (rowsAffected > 0) {
+                 System.out.println("Search Time saved for player: " + playername);
+             }
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+    }
+
     
 }

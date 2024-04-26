@@ -1,9 +1,5 @@
 package Model;
 import View.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,9 +21,9 @@ public class SortModel {
         Welcome w = new Welcome();
         playername = w.returnPlayerName();
 
-        numbers = generateRandomNumbers();
-        Map<String, Long> sortTimes = measureSortTimes(numbers);
-        Model.Database.D_Sort_saveSortTimes(playername,sortTimes);
+        numbers = generateRandomNumbers();//generate random numbers
+        Map<String, Long> sortTimes = measureSortTimes(numbers);//measure sort times
+        Model.Database.D_Sort_saveSortTimes(playername,sortTimes);//save sort times
         //saveSortTimesToDatabase(sortTimes);   
     }
     
@@ -38,43 +34,7 @@ public class SortModel {
     return success;
     }
    
-//    //save player response to database
-//   public static boolean M_Sort_saveResponse(int guessedIndex1, int guessedIndex2, boolean resstatus1, boolean resstatus2) {
-//    boolean success = false;
-//    String status1,status2;
-//    if (resstatus1) {
-//        status1 = "true";
-//    } else {
-//        status1 = "false";
-//    }
-//
-//    if (resstatus2) {
-//        status2 = "true";
-//    } else {
-//        status2 = "false";
-//    }
-//    
-//    String query = "INSERT INTO response_table (player_name, guessed_index1, guessed_index2, status1, status2) VALUES (?, ?, ?, ?, ?)";
-//    
-//    try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD);
-//        PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-//        preparedStatement.setString(1, playername);
-//        preparedStatement.setInt(2, guessedIndex1);
-//        preparedStatement.setInt(3, guessedIndex2);
-//        preparedStatement.setString(4, status1);
-//        preparedStatement.setString(5, status2);
-//        
-//        int rowsAffected = preparedStatement.executeUpdate();
-//        if (rowsAffected > 0) {
-//            success = true;
-//            System.out.println("Response saved for player: " + playername);
-//        }
-//    } catch (SQLException e) {
-//        e.printStackTrace();
-//    }
-//    
-//    return success;
-//}
+
 
     
     //get sorted values
@@ -114,26 +74,7 @@ public class SortModel {
         return endTime - startTime;
     }
 
-//    //save sort time to database
-//    private static void saveSortTimesToDatabase(Map<String, Long> sortTimes) {
-//        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
-//            for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
-//                String PlayerName=playername;
-//                String sortType = entry.getKey();
-//                long timeTaken = entry.getValue();
-//                String query = "INSERT INTO sort_times (playername,sort_type, time_taken) VALUES (?,?, ?)";
-//                try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-//                    preparedStatement.setString(1, PlayerName);
-//                    preparedStatement.setString(2, sortType);
-//                    preparedStatement.setLong(3, timeTaken);
-//                    preparedStatement.executeUpdate();
-//                }
-//            }
-//            System.out.println("Sort times saved to the database.");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
   
  //sort interface
