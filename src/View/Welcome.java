@@ -54,9 +54,7 @@ public class Welcome extends javax.swing.JFrame {
 
         img_main.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/logo.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Continue to Games");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +64,6 @@ public class Welcome extends javax.swing.JFrame {
 
         txt_PlayerName.setBackground(new java.awt.Color(204, 204, 204));
         txt_PlayerName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txt_PlayerName.setForeground(new java.awt.Color(0, 0, 0));
         txt_PlayerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_PlayerName.setMargin(new java.awt.Insets(6, 6, 6, 6));
 
@@ -110,9 +107,9 @@ public class Welcome extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txt_PlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -140,10 +137,13 @@ public class Welcome extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_close_windowActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        dispose();
+        
         player_name = txt_PlayerName.getText();
+        
+        dispose();
         Home h = new Home();
         h.setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -180,6 +180,8 @@ public class Welcome extends javax.swing.JFrame {
             }
         });
     }
+    
+    int t;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_close_window;
