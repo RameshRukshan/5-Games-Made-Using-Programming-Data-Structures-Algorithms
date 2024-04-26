@@ -46,6 +46,8 @@ public class Queens extends javax.swing.JFrame {
             InvalidOperation inv =  new InvalidOperation("Invalid Selection All 8 queens are used by you");
             inv.setVisible(true);
         }
+        QueensControl c =new QueensControl();
+        c.C_Save_response(chessBoard);
     }
 
     /**

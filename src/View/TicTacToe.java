@@ -27,6 +27,9 @@ public class TicTacToe extends javax.swing.JFrame {
         TicTacToeControl obj = new TicTacToeControl();
         String winner = obj.evaluvateTheBoard(tictactoeBoard);
         System.out.print(winner); // TDO MAke this an alert;
+        TicTacToeControl c = new TicTacToeControl();
+        c.C_Save_response(tictactoeBoard);
+       
     }
     
     public void displayComputerMove(){

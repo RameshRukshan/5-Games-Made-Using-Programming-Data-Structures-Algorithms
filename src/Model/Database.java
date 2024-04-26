@@ -24,37 +24,35 @@ public class Database {
   
     //sort algorithm********************************************************************************************
     //save sort time to database
-public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sortTimes) {
-    try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
-        StringBuilder columns = new StringBuilder("playername");
-        StringBuilder values = new StringBuilder("?");
+    public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sortTimes) {
+        try (Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USERNAME, JDBC_PASSWORD)) {
+            StringBuilder columns = new StringBuilder("playername");
+            StringBuilder values = new StringBuilder("?");
 
-        for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
-            columns.append(", `").append(entry.getKey()).append("`");
-            values.append(", ?");
-        }
-
-        String query = "INSERT INTO sort_times (" + columns + ") VALUES (" + values + ")";
-
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, playerName);
-
-            int index = 2;
-            for (long time : sortTimes.values()) {
-                preparedStatement.setLong(index++, time);
+            for (Map.Entry<String, Long> entry : sortTimes.entrySet()) {
+                columns.append(", `").append(entry.getKey()).append("`");
+                values.append(", ?");
             }
 
-            preparedStatement.executeUpdate();
+            String query = "INSERT INTO sort_times (" + columns + ") VALUES (" + values + ")";
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setString(1, playerName);
+
+                int index = 2;
+                for (long time : sortTimes.values()) {
+                    preparedStatement.setLong(index++, time);
+                }
+
+                preparedStatement.executeUpdate();
+            }
+
+            System.out.println("Sort times saved to the database for player: " + playerName);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        System.out.println("Sort times saved to the database for player: " + playerName);
-    } catch (SQLException e) {
-        e.printStackTrace();
     }
-}
 
-
-    
         //save player response to database
         public static boolean D_Sort_saveResponse(String palyer_name,int guessedIndex1, int guessedIndex2, boolean resstatus1, boolean resstatus2) {
          boolean success = false;
@@ -135,7 +133,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
          }
     }
     
- public static boolean D_Queen_saveResponse(String playerName, int[] array) {
+ public static boolean D_Queen_saveResponse(String playerName, int[][] array) {
         // Serialize the array
        String serializedArray = serializeArray(array);
 
@@ -157,7 +155,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
     }
  
  
-  public static boolean D_Tictactoe_saveResponse(String playerName, int[] array) {
+  public static boolean D_Tictactoe_saveResponse(String playerName, int[][] array) {
         // Serialize the array
        String serializedArray = serializeArray(array);
 
@@ -178,7 +176,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
             return false;
     }
   
-    public static boolean D_ShortestPath_saveResponse(String playerName, int[] array) {
+    public static boolean D_ShortestPath_saveResponse(String playerName, int[][] array) {
         // Serialize the array
        String serializedArray = serializeArray(array);
 
@@ -199,18 +197,26 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
             return false;
     }
 
-    private static String serializeArray(int[] array) {
-        // Manually construct a JSON array string
-        StringBuilder jsonBuilder = new StringBuilder("[");
-        for (int i = 0; i < array.length; i++) {
-            jsonBuilder.append(array[i]);
-            if (i < array.length - 1) {
+  private static String serializeArray(int[][] array) {
+    // Manually construct a JSON array string for a 2D array
+    StringBuilder jsonBuilder = new StringBuilder("[");
+    for (int i = 0; i < array.length; i++) {
+        jsonBuilder.append("[");
+        for (int j = 0; j < array[i].length; j++) {
+            jsonBuilder.append(array[i][j]);
+            if (j < array[i].length - 1) {
                 jsonBuilder.append(",");
             }
         }
         jsonBuilder.append("]");
-        return jsonBuilder.toString();
+        if (i < array.length - 1) {
+            jsonBuilder.append(",");
+        }
     }
+    jsonBuilder.append("]");
+    return jsonBuilder.toString();
+}
+
 }
     
 /*
