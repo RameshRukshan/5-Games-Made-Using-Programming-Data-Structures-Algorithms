@@ -14,4 +14,7 @@ public class SearchControl {
         Model.SearchModel.M_SearchTime(binaryTime, jumpTime, exponentialTime, fibonacciTime);
     }
     
+    public static void C_SearchResponse(String userChoice, long targetIndex,boolean response) {
+        Model.SearchModel.M_SearchResponse(userChoice, targetIndex ,response);
+    }
 }

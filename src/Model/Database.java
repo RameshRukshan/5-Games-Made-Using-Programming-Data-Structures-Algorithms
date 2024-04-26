@@ -93,6 +93,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
          return success;
      }
 
+        //save search time to database
     public static void D_SearchTime(String playername, long binaryTime, long jumpTime, long exponentialTime, long fibonacciTime) {
         String query = "INSERT INTO SearchTime_table (playername, binaryTime, jumpTime, exponentialTime, fibonacciTime) VALUES (?, ?, ?, ?, ?)";
 
@@ -113,6 +114,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
          }
     }
 
+    //save the search response to database 
     static void D_SearchResponse(String playername, String userChoice, long targetIndex, boolean response) {
         String query = "INSERT INTO SearchResponse_table (playername, userChoice, targetIndex, response) VALUES (?, ?, ?, ?)";
 
@@ -126,7 +128,7 @@ public static void D_Sort_saveSortTimes(String playerName, Map<String, Long> sor
 
              int rowsAffected = preparedStatement.executeUpdate();
              if (rowsAffected > 0) {
-                 System.out.println("Search Time saved for player: " + playername);
+                 System.out.println("Search response saved for player: " + playername);
              }
          } catch (SQLException e) {
              e.printStackTrace();
