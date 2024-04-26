@@ -80,9 +80,15 @@ public class Shortast extends javax.swing.JFrame {
         List<Integer> list = Arrays.asList(playerPathInteger);
         if(obj.checkPlayerAnswer(list) == true){
             // show answer is correct
+            System.out.println("Answer Correct");
+            ValidAnswer vala = new ValidAnswer();
+            vala.setVisible(true);
         }
         else{
             // show answer is incorrect
+            System.out.println("Invalid Answer");
+            InvalidAnswer inva = new InvalidAnswer();
+            inva.setVisible(true);
         }
     }
     
@@ -101,21 +107,14 @@ public class Shortast extends javax.swing.JFrame {
         map = new javax.swing.JPanel();
         btn_1 = new javax.swing.JButton();
         btn_2 = new javax.swing.JButton();
-        distance_a_b = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         btn_3 = new javax.swing.JButton();
-        distance_a_c = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         btn_4 = new javax.swing.JButton();
-        distance_c_d = new javax.swing.JLabel();
-        distance_b_d = new javax.swing.JLabel();
-        distance_a_d = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btn_5 = new javax.swing.JButton();
-        distance_c_e = new javax.swing.JLabel();
-        distance_d_e = new javax.swing.JLabel();
         btn_6 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         btn_7 = new javax.swing.JButton();
@@ -124,19 +123,29 @@ public class Shortast extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         btn_9 = new javax.swing.JButton();
-        distance_e_f = new javax.swing.JLabel();
-        distance_i_f = new javax.swing.JLabel();
-        distance_i_h = new javax.swing.JLabel();
-        distance_i_g = new javax.swing.JLabel();
-        distance_b_g = new javax.swing.JLabel();
-        distance_b_h = new javax.swing.JLabel();
-        distance_d_h = new javax.swing.JLabel();
-        distance_d_f = new javax.swing.JLabel();
         btn_close_window = new javax.swing.JButton();
         btn_generate_paths = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         btn_reset = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        distance_a_c = new javax.swing.JLabel();
+        distance_c_e = new javax.swing.JLabel();
+        distance_a_b = new javax.swing.JLabel();
+        distance_a_d = new javax.swing.JLabel();
+        distance_c_d = new javax.swing.JLabel();
+        distance_d_f = new javax.swing.JLabel();
+        distance_e_f = new javax.swing.JLabel();
+        distance_d_e = new javax.swing.JLabel();
+        distance_b_g = new javax.swing.JLabel();
+        distance_b_d = new javax.swing.JLabel();
+        distance_d_h = new javax.swing.JLabel();
+        distance_i_f = new javax.swing.JLabel();
+        distance_i_h = new javax.swing.JLabel();
+        distance_b_h = new javax.swing.JLabel();
+        distance_i_g = new javax.swing.JLabel();
+        brn_check_answer = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -172,9 +181,6 @@ public class Shortast extends javax.swing.JFrame {
             }
         });
 
-        distance_a_b.setForeground(new java.awt.Color(0, 0, 0));
-        distance_a_b.setText("N/A");
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/A.png"))); // NOI18N
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/B.png"))); // NOI18N
@@ -192,9 +198,6 @@ public class Shortast extends javax.swing.JFrame {
             }
         });
 
-        distance_a_c.setForeground(new java.awt.Color(0, 0, 0));
-        distance_a_c.setText("N/A");
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/D.png"))); // NOI18N
 
         btn_4.setBackground(new java.awt.Color(255, 255, 255));
@@ -208,15 +211,6 @@ public class Shortast extends javax.swing.JFrame {
             }
         });
 
-        distance_c_d.setForeground(new java.awt.Color(0, 0, 0));
-        distance_c_d.setText("N/A");
-
-        distance_b_d.setForeground(new java.awt.Color(0, 0, 0));
-        distance_b_d.setText("N/A");
-
-        distance_a_d.setForeground(new java.awt.Color(0, 0, 0));
-        distance_a_d.setText("N/A");
-
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/E.png"))); // NOI18N
 
         btn_5.setBackground(new java.awt.Color(255, 255, 255));
@@ -229,12 +223,6 @@ public class Shortast extends javax.swing.JFrame {
                 btn_5ActionPerformed(evt);
             }
         });
-
-        distance_c_e.setForeground(new java.awt.Color(0, 0, 0));
-        distance_c_e.setText("N/A");
-
-        distance_d_e.setForeground(new java.awt.Color(0, 0, 0));
-        distance_d_e.setText("N/A");
 
         btn_6.setBackground(new java.awt.Color(255, 255, 255));
         btn_6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -288,30 +276,6 @@ public class Shortast extends javax.swing.JFrame {
             }
         });
 
-        distance_e_f.setForeground(new java.awt.Color(0, 0, 0));
-        distance_e_f.setText("N/A");
-
-        distance_i_f.setForeground(new java.awt.Color(0, 0, 0));
-        distance_i_f.setText("N/A");
-
-        distance_i_h.setForeground(new java.awt.Color(0, 0, 0));
-        distance_i_h.setText("N/A");
-
-        distance_i_g.setForeground(new java.awt.Color(0, 0, 0));
-        distance_i_g.setText("N/A");
-
-        distance_b_g.setForeground(new java.awt.Color(0, 0, 0));
-        distance_b_g.setText("N/A");
-
-        distance_b_h.setForeground(new java.awt.Color(0, 0, 0));
-        distance_b_h.setText("N/A");
-
-        distance_d_h.setForeground(new java.awt.Color(0, 0, 0));
-        distance_d_h.setText("N/A");
-
-        distance_d_f.setForeground(new java.awt.Color(0, 0, 0));
-        distance_d_f.setText("N/A");
-
         javax.swing.GroupLayout mapLayout = new javax.swing.GroupLayout(map);
         map.setLayout(mapLayout);
         mapLayout.setHorizontalGroup(
@@ -319,41 +283,17 @@ public class Shortast extends javax.swing.JFrame {
             .addGroup(mapLayout.createSequentialGroup()
                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mapLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGap(431, 431, 431)
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(btn_4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(distance_b_h)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(distance_a_d)
-                                            .addGroup(mapLayout.createSequentialGroup()
-                                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(distance_b_g)
-                                                    .addComponent(distance_a_b))
-                                                .addGap(34, 34, 34)
-                                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel4)
-                                                    .addComponent(btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(98, 98, 98)
-                                        .addComponent(distance_b_d)))))
+                            .addComponent(jLabel4)
+                            .addComponent(btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(296, 296, 296))
+                    .addGroup(mapLayout.createSequentialGroup()
+                        .addGap(431, 431, 431)
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(distance_d_e)
-                                .addGap(123, 123, 123))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(distance_d_f)
-                                .addGap(77, 77, 77))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
-                        .addComponent(distance_d_h)
-                        .addGap(157, 157, 157)))
+                            .addComponent(jLabel6)
+                            .addComponent(btn_4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(176, 176, 176)))
                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
@@ -365,54 +305,36 @@ public class Shortast extends javax.swing.JFrame {
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(mapLayout.createSequentialGroup()
                                 .addComponent(btn_7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(116, 116, 116)
-                                .addComponent(distance_i_g)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(mapLayout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(67, 67, 67)
-                                        .addComponent(distance_i_h)))
-                                .addGap(100, 100, 100)))
+                                    .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(189, 189, 189)))
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(distance_i_f)))
+                            .addComponent(jLabel11))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
-                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(mapLayout.createSequentialGroup()
-                                .addComponent(distance_c_d)
-                                .addGap(297, 297, 297)
-                                .addComponent(distance_e_f))
+                                .addComponent(btn_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(207, 207, 207))
                             .addGroup(mapLayout.createSequentialGroup()
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addComponent(btn_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(207, 207, 207))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(distance_a_c)
-                                        .addGap(87, 87, 87)))
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addComponent(btn_3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(distance_c_e)
-                                        .addGap(101, 101, 101)))
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(btn_5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabel3)
+                                .addGap(87, 87, 87)))
+                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mapLayout.createSequentialGroup()
+                                .addComponent(btn_3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(mapLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(btn_5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(117, 117, 117))))
         );
         mapLayout.setVerticalGroup(
@@ -433,89 +355,55 @@ public class Shortast extends javax.swing.JFrame {
                                 .addGap(100, 100, 100)
                                 .addComponent(btn_5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(mapLayout.createSequentialGroup()
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(distance_a_c))
+                                .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(distance_c_e)
-                                .addComponent(jLabel7)))))
+                            .addComponent(jLabel7))))
                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mapLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addComponent(distance_c_d)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(mapLayout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(distance_e_f)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
-                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addComponent(distance_d_e)
-                                .addGap(84, 84, 84)
-                                .addComponent(btn_6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel8))
-                        .addGap(17, 17, 17)
-                        .addComponent(distance_i_f)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGap(100, 100, 100)
-                                .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel11))
-                        .addContainerGap())
-                    .addGroup(mapLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(mapLayout.createSequentialGroup()
+                                    .addGap(100, 100, 100)
+                                    .addComponent(btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel4))
                             .addGroup(mapLayout.createSequentialGroup()
-                                .addComponent(distance_a_d)
-                                .addGap(18, 18, 18)
                                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(mapLayout.createSequentialGroup()
                                         .addGap(100, 100, 100)
-                                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(distance_b_d)))
-                                    .addComponent(jLabel4)))
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addComponent(distance_a_b)
-                                .addGap(96, 96, 96))
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addComponent(distance_d_f)
-                                        .addGap(84, 84, 84)
                                         .addComponent(btn_4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel6))
                                 .addGap(28, 28, 28)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(distance_d_h)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(mapLayout.createSequentialGroup()
-                                .addComponent(distance_b_g)
-                                .addGap(18, 18, 18)
-                                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addGroup(mapLayout.createSequentialGroup()
-                                        .addGap(39, 39, 39)
-                                        .addComponent(distance_b_h)
-                                        .addGap(45, 45, 45)
-                                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(distance_i_g)
-                                            .addComponent(btn_7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel9)
+                                .addGroup(mapLayout.createSequentialGroup()
+                                    .addGap(100, 100, 100)
+                                    .addComponent(btn_7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(mapLayout.createSequentialGroup()
                                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addGroup(mapLayout.createSequentialGroup()
                                         .addGap(100, 100, 100)
-                                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(distance_i_h)
-                                            .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(30, 30, 30)))
-                        .addGap(20, 20, 20))))
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mapLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mapLayout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(btn_6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel8))
+                        .addGap(45, 45, 45)
+                        .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mapLayout.createSequentialGroup()
+                                .addGap(100, 100, 100)
+                                .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel11))
+                        .addContainerGap())))
         );
 
         btn_close_window.setBackground(new java.awt.Color(255, 128, 19));
@@ -562,6 +450,127 @@ public class Shortast extends javax.swing.JFrame {
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/shortast.png"))); // NOI18N
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        distance_a_c.setForeground(new java.awt.Color(0, 0, 0));
+        distance_a_c.setText("Distance A - B : N/A");
+
+        distance_c_e.setForeground(new java.awt.Color(0, 0, 0));
+        distance_c_e.setText("N/A");
+
+        distance_a_b.setForeground(new java.awt.Color(0, 0, 0));
+        distance_a_b.setText("N/A");
+
+        distance_a_d.setForeground(new java.awt.Color(0, 0, 0));
+        distance_a_d.setText("N/A");
+
+        distance_c_d.setForeground(new java.awt.Color(0, 0, 0));
+        distance_c_d.setText("N/A");
+
+        distance_d_f.setForeground(new java.awt.Color(0, 0, 0));
+        distance_d_f.setText("N/A");
+
+        distance_e_f.setForeground(new java.awt.Color(0, 0, 0));
+        distance_e_f.setText("N/A");
+
+        distance_d_e.setForeground(new java.awt.Color(0, 0, 0));
+        distance_d_e.setText("N/A");
+
+        distance_b_g.setForeground(new java.awt.Color(0, 0, 0));
+        distance_b_g.setText("N/A");
+
+        distance_b_d.setForeground(new java.awt.Color(0, 0, 0));
+        distance_b_d.setText("N/A");
+
+        distance_d_h.setForeground(new java.awt.Color(0, 0, 0));
+        distance_d_h.setText("N/A");
+
+        distance_i_f.setForeground(new java.awt.Color(0, 0, 0));
+        distance_i_f.setText("N/A");
+
+        distance_i_h.setForeground(new java.awt.Color(0, 0, 0));
+        distance_i_h.setText("N/A");
+
+        distance_b_h.setForeground(new java.awt.Color(0, 0, 0));
+        distance_b_h.setText("N/A");
+
+        distance_i_g.setForeground(new java.awt.Color(0, 0, 0));
+        distance_i_g.setText("N/A");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(distance_i_g)
+                    .addComponent(distance_b_h)
+                    .addComponent(distance_i_h)
+                    .addComponent(distance_i_f)
+                    .addComponent(distance_d_h)
+                    .addComponent(distance_b_d)
+                    .addComponent(distance_b_g)
+                    .addComponent(distance_d_e)
+                    .addComponent(distance_e_f)
+                    .addComponent(distance_d_f)
+                    .addComponent(distance_c_d)
+                    .addComponent(distance_a_d)
+                    .addComponent(distance_a_b)
+                    .addComponent(distance_c_e)
+                    .addComponent(distance_a_c))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(distance_a_c)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(distance_c_e)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(distance_a_b)
+                .addGap(18, 18, 18)
+                .addComponent(distance_a_d)
+                .addGap(18, 18, 18)
+                .addComponent(distance_c_d)
+                .addGap(18, 18, 18)
+                .addComponent(distance_d_f)
+                .addGap(18, 18, 18)
+                .addComponent(distance_e_f)
+                .addGap(18, 18, 18)
+                .addComponent(distance_d_e)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(distance_b_g)
+                .addGap(18, 18, 18)
+                .addComponent(distance_b_d)
+                .addGap(18, 18, 18)
+                .addComponent(distance_d_h)
+                .addGap(18, 18, 18)
+                .addComponent(distance_i_f)
+                .addGap(18, 18, 18)
+                .addComponent(distance_i_h)
+                .addGap(18, 18, 18)
+                .addComponent(distance_b_h)
+                .addGap(18, 18, 18)
+                .addComponent(distance_i_g)
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        brn_check_answer.setBackground(new java.awt.Color(0, 102, 0));
+        brn_check_answer.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        brn_check_answer.setForeground(new java.awt.Color(255, 255, 255));
+        brn_check_answer.setText("Check Answer");
+        brn_check_answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brn_check_answerActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Find Shortast Path A to I");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -580,12 +589,18 @@ public class Shortast extends javax.swing.JFrame {
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btn_reset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(589, 589, 589)
+                                .addGap(18, 18, 18)
+                                .addComponent(brn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(287, 287, 287)
                                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(btn_generate_paths, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addContainerGap(75, Short.MAX_VALUE))))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addContainerGap(81, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -595,16 +610,22 @@ public class Shortast extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
-                .addComponent(btn_generate_paths, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_generate_paths, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addComponent(map, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel18)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(brn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
@@ -626,6 +647,7 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
         // TODO add your handling code here:
         btn_2.setEnabled(false);
+        playerPath(1);
         
     }//GEN-LAST:event_btn_2ActionPerformed
 
@@ -638,21 +660,21 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
         // TODO add your handling code here:
         btn_1.setEnabled(false);
+        playerPath(0);
+        
+        //Graphics2D g2d = (Graphics2D)map.getGraphics();
+        //Stroke stk = new BasicStroke(3f);   //define thickness
+        //g2d.setStroke(stk);     //set thikness 
+        //g2d.setColor(new java.awt.Color(255, 128, 19));     //set color
+        //g2d.drawLine(btn_1.getLocation().x, btn_1.getLocation().y, btn_2.getLocation().x, btn_2.getLocation().y);   //set City A to City B path
         
         
-        Graphics2D g2d = (Graphics2D)map.getGraphics();
-        Stroke stk = new BasicStroke(3f);   //define thickness
-        g2d.setStroke(stk);     //set thikness 
-        g2d.setColor(new java.awt.Color(255, 128, 19));     //set color
-        g2d.drawLine(btn_1.getLocation().x, btn_1.getLocation().y, btn_2.getLocation().x, btn_2.getLocation().y);   //set City A to City B path
-        
-        
-        map.paintComponents(g2d);
+        //map.paintComponents(g2d);
     }//GEN-LAST:event_btn_1ActionPerformed
 
     private void btn_generate_pathsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generate_pathsActionPerformed
         // TODO add your handling code here:
-        
+        generateDistance();
         Graphics2D g2d = (Graphics2D)map.getGraphics();         //create map graphics
         
         g2d.drawLine(btn_1.getLocation().x, btn_1.getLocation().y, btn_2.getLocation().x, btn_2.getLocation().y);   //set City A to City B path
@@ -671,6 +693,24 @@ public class Shortast extends javax.swing.JFrame {
         g2d.drawLine(btn_9.getLocation().x, btn_9.getLocation().y, btn_8.getLocation().x, btn_8.getLocation().y);   //set City H to City I path
         g2d.drawLine(btn_9.getLocation().x, btn_9.getLocation().y, btn_7.getLocation().x, btn_7.getLocation().y);   //set City G to City I path
         
+       
+        
+        distance_a_b.setText("Distance A - B : " + String.valueOf(newmap[0][1]));
+        distance_a_c.setText("Distance A - C : " + String.valueOf(newmap[0][2]));
+        distance_a_d.setText("Distance A - D : " + String.valueOf(newmap[0][3]));
+        distance_b_d.setText("Distance B - D : " + String.valueOf(newmap[1][3]));
+        distance_b_g.setText("Distance B - G : " + String.valueOf(newmap[1][6]));
+        distance_b_h.setText("Distance B - H : " + String.valueOf(newmap[1][7]));
+        distance_c_d.setText("Distance C - D : " + String.valueOf(newmap[2][3]));
+        distance_c_e.setText("Distance C - E : " + String.valueOf(newmap[2][4]));
+        distance_d_f.setText("Distance D - F : " + String.valueOf(newmap[3][5]));
+        distance_d_h.setText("Distance D - H : " + String.valueOf(newmap[3][7]));
+        distance_d_e.setText("Distance D - E : " + String.valueOf(newmap[3][4]));
+        distance_e_f.setText("Distance E - F : " + String.valueOf(newmap[4][5]));
+        distance_i_f.setText("Distance F - I : " + String.valueOf(newmap[5][8]));
+        distance_i_g.setText("Distance G - I : " + String.valueOf(newmap[6][8]));
+        distance_i_h.setText("Distance H - I : " + String.valueOf(newmap[7][8]));
+        
         map.paintComponents(g2d);   //add drawings to map
     }//GEN-LAST:event_btn_generate_pathsActionPerformed
 
@@ -682,42 +722,44 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
         // TODO add your handling code here:
         btn_3.setEnabled(false);
-        
+        playerPath(2);
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
         // TODO add your handling code here:
         btn_4.setEnabled(false);
+        playerPath(3);
         
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
         // TODO add your handling code here:
         btn_5.setEnabled(false);
-        
+        playerPath(4);
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
         // TODO add your handling code here:
         btn_6.setEnabled(false);
-        
+        playerPath(5);
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
         // TODO add your handling code here:
         btn_7.setEnabled(false);
-        
+        playerPath(6);
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
         // TODO add your handling code here:
         btn_8.setEnabled(false);
-        
+        playerPath(7);
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
         // TODO add your handling code here:
         btn_9.setEnabled(false);
+        playerPath(8);
         
     }//GEN-LAST:event_btn_9ActionPerformed
 
@@ -731,6 +773,12 @@ public class Shortast extends javax.swing.JFrame {
         Shortast sh = new Shortast();
         sh.setVisible(true);
     }//GEN-LAST:event_btn_resetActionPerformed
+
+    private void brn_check_answerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brn_check_answerActionPerformed
+        // TODO add your handling code here:
+        System.out.println("btn check answer click");
+        calculateShortestDistance();
+    }//GEN-LAST:event_brn_check_answerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -768,8 +816,7 @@ public class Shortast extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel CItyA1;
-    private javax.swing.JPanel CItyA2;
+    private javax.swing.JButton brn_check_answer;
     private javax.swing.JButton btn_1;
     private javax.swing.JButton btn_2;
     private javax.swing.JButton btn_3;
@@ -802,6 +849,7 @@ public class Shortast extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -809,6 +857,7 @@ public class Shortast extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel map;
     // End of variables declaration//GEN-END:variables
