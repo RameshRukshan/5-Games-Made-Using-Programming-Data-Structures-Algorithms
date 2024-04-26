@@ -80,9 +80,15 @@ public class Shortast extends javax.swing.JFrame {
         List<Integer> list = Arrays.asList(playerPathInteger);
         if(obj.checkPlayerAnswer(list) == true){
             // show answer is correct
+            System.out.println("Answer Correct");
+            ValidAnswer vala = new ValidAnswer();
+            vala.setVisible(true);
         }
         else{
             // show answer is incorrect
+            System.out.println("Invalid Answer");
+            InvalidAnswer inva = new InvalidAnswer();
+            inva.setVisible(true);
         }
     }
     
@@ -138,6 +144,8 @@ public class Shortast extends javax.swing.JFrame {
         distance_i_h = new javax.swing.JLabel();
         distance_b_h = new javax.swing.JLabel();
         distance_i_g = new javax.swing.JLabel();
+        brn_check_answer = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -549,6 +557,20 @@ public class Shortast extends javax.swing.JFrame {
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
+        brn_check_answer.setBackground(new java.awt.Color(0, 102, 0));
+        brn_check_answer.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        brn_check_answer.setForeground(new java.awt.Color(255, 255, 255));
+        brn_check_answer.setText("Check Answer");
+        brn_check_answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brn_check_answerActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Find Shortast Path A to I");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -567,13 +589,17 @@ public class Shortast extends javax.swing.JFrame {
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btn_reset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(589, 589, 589)
+                                .addGap(18, 18, 18)
+                                .addComponent(brn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(287, 287, 287)
                                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(btn_generate_paths, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(map, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(26, 26, 26)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
                         .addContainerGap(81, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -584,7 +610,9 @@ public class Shortast extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
-                .addComponent(btn_generate_paths, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_generate_paths, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -592,10 +620,12 @@ public class Shortast extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel18)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(brn_check_answer, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
@@ -617,6 +647,7 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
         // TODO add your handling code here:
         btn_2.setEnabled(false);
+        playerPath(1);
         
     }//GEN-LAST:event_btn_2ActionPerformed
 
@@ -629,16 +660,16 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
         // TODO add your handling code here:
         btn_1.setEnabled(false);
+        playerPath(0);
+        
+        //Graphics2D g2d = (Graphics2D)map.getGraphics();
+        //Stroke stk = new BasicStroke(3f);   //define thickness
+        //g2d.setStroke(stk);     //set thikness 
+        //g2d.setColor(new java.awt.Color(255, 128, 19));     //set color
+        //g2d.drawLine(btn_1.getLocation().x, btn_1.getLocation().y, btn_2.getLocation().x, btn_2.getLocation().y);   //set City A to City B path
         
         
-        Graphics2D g2d = (Graphics2D)map.getGraphics();
-        Stroke stk = new BasicStroke(3f);   //define thickness
-        g2d.setStroke(stk);     //set thikness 
-        g2d.setColor(new java.awt.Color(255, 128, 19));     //set color
-        g2d.drawLine(btn_1.getLocation().x, btn_1.getLocation().y, btn_2.getLocation().x, btn_2.getLocation().y);   //set City A to City B path
-        
-        
-        map.paintComponents(g2d);
+        //map.paintComponents(g2d);
     }//GEN-LAST:event_btn_1ActionPerformed
 
     private void btn_generate_pathsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generate_pathsActionPerformed
@@ -680,7 +711,7 @@ public class Shortast extends javax.swing.JFrame {
         distance_i_g.setText("Distance G - I : " + String.valueOf(newmap[6][8]));
         distance_i_h.setText("Distance H - I : " + String.valueOf(newmap[7][8]));
         
-         map.paintComponents(g2d);   //add drawings to map
+        map.paintComponents(g2d);   //add drawings to map
     }//GEN-LAST:event_btn_generate_pathsActionPerformed
 
     public void activePath(int id){
@@ -691,42 +722,44 @@ public class Shortast extends javax.swing.JFrame {
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
         // TODO add your handling code here:
         btn_3.setEnabled(false);
-        
+        playerPath(2);
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
         // TODO add your handling code here:
         btn_4.setEnabled(false);
+        playerPath(3);
         
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
         // TODO add your handling code here:
         btn_5.setEnabled(false);
-        
+        playerPath(4);
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
         // TODO add your handling code here:
         btn_6.setEnabled(false);
-        
+        playerPath(5);
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
         // TODO add your handling code here:
         btn_7.setEnabled(false);
-        
+        playerPath(6);
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
         // TODO add your handling code here:
         btn_8.setEnabled(false);
-        
+        playerPath(7);
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
         // TODO add your handling code here:
         btn_9.setEnabled(false);
+        playerPath(8);
         
     }//GEN-LAST:event_btn_9ActionPerformed
 
@@ -740,6 +773,12 @@ public class Shortast extends javax.swing.JFrame {
         Shortast sh = new Shortast();
         sh.setVisible(true);
     }//GEN-LAST:event_btn_resetActionPerformed
+
+    private void brn_check_answerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brn_check_answerActionPerformed
+        // TODO add your handling code here:
+        System.out.println("btn check answer click");
+        calculateShortestDistance();
+    }//GEN-LAST:event_brn_check_answerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -777,6 +816,7 @@ public class Shortast extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton brn_check_answer;
     private javax.swing.JButton btn_1;
     private javax.swing.JButton btn_2;
     private javax.swing.JButton btn_3;
@@ -809,6 +849,7 @@ public class Shortast extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
