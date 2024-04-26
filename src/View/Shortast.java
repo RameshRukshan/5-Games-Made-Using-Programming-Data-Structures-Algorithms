@@ -33,6 +33,7 @@ public class Shortast extends javax.swing.JFrame {
     ShortestDisControl obj = new ShortestDisControl();
     
     int playerpath [] = {0,0,0,0,0,0,0,0,0}; // Array which stores the player path
+    
     int verticesCount = 0;
     int[][] newmap = {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
