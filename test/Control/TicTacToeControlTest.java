@@ -1,69 +1,69 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package Control;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
-/**
- *
- * @author chiran
- */
 public class TicTacToeControlTest {
-    
-    public TicTacToeControlTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
+
+    private TicTacToeControl control;
+
+    @Before
     public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
+        control = new TicTacToeControl();
     }
 
-    /**
-     * Test of computeMove method, of class TicTacToeControl.
-     */
     @Test
-    public void testComputeMove() {
-        System.out.println("computeMove");
-        int[][] board = null;
-        TicTacToeControl instance = new TicTacToeControl();
-        int[][] expResult = null;
-        int[][] result = instance.computeMove(board);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testEvaluateBoardPlayerWinsHorizontal() {
+        int[][] board = {
+            {1, 1, 1},
+            {2, 2, 0},
+            {0, 0, 0}
+        };
+        assertEquals("Evaluation should show player win", "player", control.evaluvateTheBoard(board));
     }
 
-    /**
-     * Test of evaluvateTheBoard method, of class TicTacToeControl.
-     */
     @Test
-    public void testEvaluvateTheBoard() {
-        System.out.println("evaluvateTheBoard");
-        int[][] board = null;
-        TicTacToeControl instance = new TicTacToeControl();
-        String expResult = "";
-        String result = instance.evaluvateTheBoard(board);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testEvaluateBoardComputerWinsVertical() {
+        int[][] board = {
+            {2, 1, 0},
+            {2, 1, 0},
+            {2, 0, 1}
+        };
+        assertEquals("Evaluation should show computer win", "computer", control.evaluvateTheBoard(board));
     }
-    
+
+    @Test
+    public void testEvaluateBoardDraw() {
+        int[][] board = {
+            {1, 2, 1},
+            {2, 1, 2},
+            {2, 1, 1}
+        };
+        assertEquals("Evaluation should indicate a draw", "draw", control.evaluvateTheBoard(board));
+    }
+
+    @Test
+    public void testEvaluateBoardPlayerWinsDiagonally() {
+        int[][] board = {
+            {1, 2, 0},
+            {0, 1, 2},
+            {0, 0, 1}
+        };
+        assertEquals("Evaluation should show player win", "player", control.evaluvateTheBoard(board));
+    }
+
+    @Test
+    public void testEvaluateBoardComputerWinsDiagonally() {
+        int[][] board = {
+            {2, 0, 1},
+            {0, 2, 1},
+            {1, 0, 2}
+        };
+        assertEquals("Evaluation should show computer win", "computer", control.evaluvateTheBoard(board));
+    }
 }

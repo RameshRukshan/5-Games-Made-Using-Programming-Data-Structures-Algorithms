@@ -4,12 +4,8 @@
  */
 package Control;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -17,38 +13,38 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class QueensControlTest {
     
-    public QueensControlTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
+    @Test
+    public void testCheckSafeWithNoQueens() {
+        QueensControl control = new QueensControl();
+        int[][] board = new int[8][8]; // An empty board
+        assertTrue("Board should be safe with no queens", control.checkSafe(board));
     }
 
-    /**
-     * Test of checkSafe method, of class QueensControl.
-     */
     @Test
-    public void testCheckSafe() {
-        System.out.println("checkSafe");
-        int[][] board = null;
-        QueensControl instance = new QueensControl();
-        boolean expResult = false;
-        boolean result = instance.checkSafe(board);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testCheckSafeWithOneQueen() {
+        QueensControl control = new QueensControl();
+        int[][] board = new int[8][8];
+        board[0][0] = 1; // Place one queen at the top-left corner
+        assertTrue("Board should be safe with one queen", control.checkSafe(board));
+    }
+
+    @Test
+    public void testCheckSafeWithQueensAttackingEachOther() {
+        QueensControl control = new QueensControl();
+        int[][] board = new int[8][8];
+        board[0][0] = 1; // Place one queen at the top-left corner
+        board[0][1] = 1; // Place another queen next to the first one, horizontal attack
+        assertFalse("Board should not be safe", control.checkSafe(board));
+    }
+    
+    @Test
+    public void testCheckSafeWithSafePlacements() {
+        QueensControl control = new QueensControl();
+        int[][] board = new int[8][8];
+        board[0][0] = 1; // Place one queen at the top-left corner
+        board[1][2] = 1; // Place another queen, no direct attacks
+        board[2][4] = 1; // Further placement, still no attacks
+        assertTrue("Board should be safe", control.checkSafe(board));
     }
     
 }
