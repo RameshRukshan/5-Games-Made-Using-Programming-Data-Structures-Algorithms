@@ -5,6 +5,12 @@
 package Main;
 import View.Home;
 import Control.QueensControl;
+import Control.TicTacToeControl;
+import Control.ShortestDisControl;
+import Model.ShortestDisModel;
+import java.util.List;
+import java.util.Random;
+
 /**
  *
  * @author chiran
@@ -13,7 +19,7 @@ public class main {
     public static void main(String[] args){
         //Home ne = new Home();
         //ne.setVisible(true);
-        QueensControl ne = new QueensControl();
+        /*QueensControl ne = new QueensControl();
         int[][] chessBoard = {
             {0, 0, 0, 1, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 1, 0},
@@ -28,7 +34,22 @@ public class main {
         }
         else{
             System.out.println("--- Invalid Solution ---");
-        }
+        }*/
         
+        int[][] tictactoeBoard = {
+                        {1,0,0},
+                        {0,1,0},
+                        {0,0,0} };
+        TicTacToeControl ne = new TicTacToeControl();
+        int[][] newboard = ne.computeMove(tictactoeBoard);
+        newboard = ne.computeMove(tictactoeBoard);
+        newboard = ne.computeMove(tictactoeBoard);
+        newboard = ne.computeMove(tictactoeBoard);
+        for(int i = 0;i < newboard.length; i++){
+            for(int j = 0;j < newboard[i].length; j++){
+                System.out.println(newboard[i][j] + ", ");
+            }
+        
+        }
     }
 }

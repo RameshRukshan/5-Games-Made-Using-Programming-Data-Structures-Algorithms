@@ -54,9 +54,7 @@ public class Welcome extends javax.swing.JFrame {
 
         img_main.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/logo.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Continue to Games");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +64,6 @@ public class Welcome extends javax.swing.JFrame {
 
         txt_PlayerName.setBackground(new java.awt.Color(204, 204, 204));
         txt_PlayerName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txt_PlayerName.setForeground(new java.awt.Color(0, 0, 0));
         txt_PlayerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_PlayerName.setMargin(new java.awt.Insets(6, 6, 6, 6));
 
