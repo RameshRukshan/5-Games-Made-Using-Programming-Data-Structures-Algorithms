@@ -413,10 +413,9 @@ public class Sort extends javax.swing.JFrame {
         // Handle the case where the input is not a valid integer
         JOptionPane.showMessageDialog(this, "Please enter a valid integer.");
     }
-     
+   
         boolean values = SortControl.C_Sort_saveResponse(guessedIndex1,guessedIndex2,resstatus1,resstatus2);
         
-      
     }//GEN-LAST:event_btn_check_answerActionPerformed
 
     
