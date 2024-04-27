@@ -14,7 +14,7 @@ public class Welcome extends javax.swing.JFrame {
      * Creates new form Welcome
      */
     
-    String player_name;
+    String player_name="";
     
     public Welcome() {
         initComponents();

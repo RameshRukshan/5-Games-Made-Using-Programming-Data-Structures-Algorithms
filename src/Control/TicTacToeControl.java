@@ -76,4 +76,9 @@ public class TicTacToeControl {
         }
         return "draw";
     }
+
+    public void C_Save_response(int[][] tictactoeBoard) {
+        TicTacToeModel m = new TicTacToeModel();
+        m.M_SaveResponse(tictactoeBoard);
+    }
 }

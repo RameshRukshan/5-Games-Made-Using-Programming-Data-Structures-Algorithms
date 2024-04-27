@@ -36,4 +36,9 @@ public class QueensControl {
         }
         return true;
     }
+
+    public void C_Save_response(int[][] chessBoard) {
+       QueensModel m = new QueensModel();
+       m.M_save_response(chessBoard);
+    }
 }

@@ -24,7 +24,11 @@ public class TicTacToeModel {
             continue;
         }
     }
-    
     return board;
+    }
+
+    public void M_SaveResponse(int[][] tictactoeBoard) {
+       String playerName="Hello";
+       boolean value = Database.D_Tictactoe_saveResponse(playerName, tictactoeBoard);
     }
 }

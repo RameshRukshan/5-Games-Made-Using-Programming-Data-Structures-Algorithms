@@ -4,11 +4,15 @@
  */
 package Model;
 
+import View.Welcome;
+
 /**
  *
  * @author chiran
  */
 public class QueensModel {
+    public static String playername;
+ 
     public boolean checkSafety(int[][] board, int row,int col){
         int boardSize = board.length;
         for(int i = 0; i < boardSize; i++){
@@ -44,4 +48,16 @@ public class QueensModel {
         }
         return true;
     }
+
+        
+    
+    public void M_save_response(int[][] chessBoard) {
+       //Welcome w = new Welcome();
+       //playername = w.returnPlayerName();
+       playername="hello";
+       boolean value = Database.D_Queen_saveResponse(playername, chessBoard);
+    }
+    
+    
+   
 }
