@@ -4,6 +4,7 @@
  */
 package Model;
 
+import View.SearchGameUI;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -239,6 +240,9 @@ public class SearchGame {
         }
 
         System.out.println("\nThe best search method is: " + bestMethod);
-        
+   
+
+
+//          SearchGameUI();
     }
 }
