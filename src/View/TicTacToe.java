@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
+import Control.TicTacToeControl;
 
 /**
  *
@@ -13,8 +14,64 @@ public class TicTacToe extends javax.swing.JFrame {
     /**
      * Creates new form TicTacToe
      */
+    int count = 0;
+    
+    int[][] tictactoeBoard = {
+                        {0,0,0},
+                        {0,0,0},
+                        {0,0,0} };
     public TicTacToe() {
         initComponents();
+    }
+    public void checkWin(){
+        TicTacToeControl obj = new TicTacToeControl();
+        String winner = obj.evaluvateTheBoard(tictactoeBoard);
+        
+        if(winner == "player"){
+            ValidAnswer vala = new ValidAnswer();
+            vala.setVisible(true);
+        }else{
+            InvalidAnswer inva = new InvalidAnswer();
+            inva.setVisible(true);
+        }
+        
+        System.out.print(winner); // TDO MAke this an alert;
+    }
+    
+    public void displayComputerMove(){
+        if(tictactoeBoard[0][0] == 2){
+            A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[0][1] == 2){
+            A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[0][2] == 2){
+            A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[1][0] == 2){
+            B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[1][1] == 2){
+            B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[1][2] == 2){
+            B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[2][0] == 2){
+            C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[2][1] == 2){
+            C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+        if(tictactoeBoard[2][2] == 2){
+            C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/O_symbol.png")));
+        }
+    }
+    
+    public void computeNextMove(){
+        TicTacToeControl obj = new TicTacToeControl();
+        tictactoeBoard = obj.computeMove(tictactoeBoard);
+        displayComputerMove();
     }
 
     /**
@@ -300,46 +357,142 @@ public class TicTacToe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A1ActionPerformed
-        A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[0][0] == 0){
+            tictactoeBoard[0][0] = 1;
+            A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_A1ActionPerformed
 
     private void A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A2ActionPerformed
-        A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[0][1] == 0){
+            tictactoeBoard[0][1] = 1;
+            A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_A2ActionPerformed
 
     private void A3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_A3ActionPerformed
         // TODO add your handling code here:
-        A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[0][2] == 0){
+            tictactoeBoard[0][2] = 1;
+            A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_A3ActionPerformed
 
     private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
         // TODO add your handling code here:
-        B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[1][2] == 0){
+            tictactoeBoard[1][2] = 1;
+            B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_B3ActionPerformed
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
         // TODO add your handling code here:
-        B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[1][0] == 0){
+            tictactoeBoard[1][0] = 1;
+            B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_B1ActionPerformed
 
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[1][1] == 0){
+            tictactoeBoard[1][1] = 1;
+            B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_B2ActionPerformed
 
     private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
-        // TODO add your handling code here:
-        C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[2][0] == 0){
+            tictactoeBoard[2][0] = 1;
+            C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_C1ActionPerformed
 
     private void C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C3ActionPerformed
-        // TODO add your handling code here:
-        C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[2][2] == 0){
+            tictactoeBoard[2][2] = 1;
+            C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_C3ActionPerformed
 
     private void C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C2ActionPerformed
-        // TODO add your handling code here:
-        C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+        if(tictactoeBoard[2][1] == 0){
+            tictactoeBoard[2][1] = 1;
+            C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/X_symbol.png")));
+            computeNextMove();
+            count++;
+            if(count == 4){
+                checkWin();
+            }
+        }
+        else{
+            // TODO : Display a msg box saying "there a value here!" ;
+        }
     }//GEN-LAST:event_C2ActionPerformed
 
     private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed

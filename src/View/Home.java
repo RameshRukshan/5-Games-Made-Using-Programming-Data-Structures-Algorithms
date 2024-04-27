@@ -427,7 +427,7 @@ public class Home extends javax.swing.JFrame {
 
     private void btn_game_predictActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_game_predictActionPerformed
         this.dispose();
-        Search game_predict = new Search();
+        SearchGameUI game_predict = new SearchGameUI();
         game_predict.setVisible(true);
     }//GEN-LAST:event_btn_game_predictActionPerformed
 
