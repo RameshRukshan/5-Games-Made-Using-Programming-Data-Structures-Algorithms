@@ -6,9 +6,7 @@ package View;
 
 import java.util.Scanner;
 import java.util.Random;
-import javax.swing.JTextField;
-import Model.SearchGame;
-import java.util.Random;
+
 import static Model.SearchGame.binarySearch;
 import static Model.SearchGame.exponentialSearch;
 import static Model.SearchGame.fibonacciSearch;
@@ -59,7 +57,8 @@ public class SearchGameUI extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        btn_close_window = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        btn_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -88,6 +87,12 @@ public class SearchGameUI extends javax.swing.JFrame {
         jLabel9.setText("jLabel9");
 
         jLabel10.setText("jLabel10");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setText("*");
 
@@ -130,12 +135,22 @@ public class SearchGameUI extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         jLabel25.setText("The best search method is:");
 
-        btn_close_window.setBackground(new java.awt.Color(255, 128, 19));
-        btn_close_window.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/close.png"))); // NOI18N
-        btn_close_window.setBorder(null);
-        btn_close_window.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-28-info (1).gif"))); // NOI18N
+        jButton2.setText("Info");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_close_windowActionPerformed(evt);
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        btn_reset.setBackground(new java.awt.Color(255, 51, 51));
+        btn_reset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assests/system-solid-18-autorenew (1).gif"))); // NOI18N
+        btn_reset.setText("Restart");
+        btn_reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_resetActionPerformed(evt);
             }
         });
 
@@ -144,69 +159,76 @@ public class SearchGameUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGap(44, 44, 44)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                                            .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                                    .addGap(44, 44, 44)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btn_reset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(btn_close_window, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,7 +271,7 @@ public class SearchGameUI extends javax.swing.JFrame {
                     .addComponent(jLabel21))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel25)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -267,22 +289,32 @@ public class SearchGameUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_close_windowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_close_windowActionPerformed
-        dispose();
-        Home home = new Home();
-        home.setVisible(true);
-    }//GEN-LAST:event_btn_close_windowActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        //this.dispose();
+        this.dispose();
+        SearchGameUI sg = new SearchGameUI();
+        sg.setVisible(true);
+    }//GEN-LAST:event_btn_resetActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
+
         SearchGameUI frame = new SearchGameUI(); // Creating an instance of SearchGameUI
         frame.setVisible(true); // Making the frame visible
-        
-       Scanner scanner = new Scanner(System.in);
+
+        Scanner scanner = new Scanner(System.in);
         int[] numbers = generateRandomNumbers(5000);
         Random rand = new Random();
         int targetIndex = rand.nextInt(numbers.length); // Select a random index as target
@@ -304,129 +336,122 @@ public class SearchGameUI extends javax.swing.JFrame {
         }
 
         // Display the game interface with randomized options
-        
         frame.jLabel2.setText("Welcome to the Search Game!");
         frame.jLabel3.setText("A random number between 1 and 1000000 has been selected.");
-        
+
         //frame.jLabel11.setText("Our Target is " + targetValue);
         frame.jLabel4.setText("Can you predict the index of the target value?");
-        
+
         System.out.println("Our Target is " + targetIndex);
-        
+
         frame.jLabel5.setText("Your options are:");
         frame.jLabel6.setText("A) Index " + optionIndices[0]);
         frame.jLabel7.setText("B) Index " + optionIndices[1]);
         frame.jLabel8.setText("C) Index " + optionIndices[2]);
         frame.jLabel9.setText("D) Index " + optionIndices[3]);
         frame.jLabel10.setText("Enter your choice?");
-        
-        
 
         // Prompt user for input
         // Validate user input and check if it matches the target index
         frame.jTextField1.addActionListener(e -> {
-        //   String userChoice = scanner.nextLine().toUpperCase();
-        String userChoice = frame.jTextField1.getText().toUpperCase(); 
-        switch (userChoice) {
-            case "A":
-                if (optionIndices[0] == targetIndex) {
-                    frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
-                } else {
-                    frame.jLabel12.setText("Sorry, wrong choice!");
-                }
-                break;
-            case "B":
-                if (optionIndices[1] == targetIndex) {
-                   frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
-                } else {
-                    frame.jLabel12.setText("Sorry, wrong choice!");
-                }
-                break;
-            case "C":
-                if (optionIndices[2] == targetIndex) {
-                    frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
-                } else {
-                    frame.jLabel12.setText("Sorry, wrong choice!");
-                }
-                break;
-            case "D":
-                if (optionIndices[3] == targetIndex) {
-                   frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
-                } else {
-                    frame.jLabel12.setText("Sorry, wrong choice!");
-                }
-                break;
-            default:
-              frame.jLabel12.setText("Invalid choice!");
-              
-              
-        }
-        
-        
+            //   String userChoice = scanner.nextLine().toUpperCase();
+            String userChoice = frame.jTextField1.getText().toUpperCase();
+            switch (userChoice) {
+                case "A":
+                    if (optionIndices[0] == targetIndex) {
+                        frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    } else {
+                        frame.jLabel12.setText("Sorry, wrong choice!");
+                    }
+                    break;
+                case "B":
+                    if (optionIndices[1] == targetIndex) {
+                        frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    } else {
+                        frame.jLabel12.setText("Sorry, wrong choice!");
+                    }
+                    break;
+                case "C":
+                    if (optionIndices[2] == targetIndex) {
+                        frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    } else {
+                        frame.jLabel12.setText("Sorry, wrong choice!");
+                    }
+                    break;
+                case "D":
+                    if (optionIndices[3] == targetIndex) {
+                        frame.jLabel12.setText("Congratulations! You've correctly predicted the index.");
+                    } else {
+                        frame.jLabel12.setText("Sorry, wrong choice!");
+                    }
+                    break;
+                default:
+                    frame.jLabel12.setText("Invalid choice!");
 
-        long startTime, endTime;
-        int result;
+            }
 
-        // Binary Search
-        startTime = System.nanoTime();
-        result = binarySearch(numbers, targetValue);
-        endTime = System.nanoTime();
-        frame.jLabel13.setText("\nBinary Search:");
-        frame.jLabel14.setText("Result: " + result);
-        frame.jLabel15.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
+            long startTime, endTime;
+            int result;
 
-        // Jump Search
-        startTime = System.nanoTime();
-        result = jumpSearch(numbers, targetValue);
-        endTime = System.nanoTime();
-        frame.jLabel16.setText("\nJump Search:");
-        frame.jLabel17.setText("Result: " + result);
-        frame.jLabel18.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
+            // Binary Search
+            startTime = System.nanoTime();
+            result = binarySearch(numbers, targetValue);
+            endTime = System.nanoTime();
+            frame.jLabel13.setText("\nBinary Search:");
+            frame.jLabel14.setText("Result: " + result);
+            frame.jLabel15.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
 
-        // Exponential Search
-        startTime = System.nanoTime();
-        result = exponentialSearch(numbers, targetValue);
-        endTime = System.nanoTime();
-        frame.jLabel19.setText("\nExponential Search:");
-        frame.jLabel20.setText("Result: " + result);
-        frame.jLabel21.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
+            // Jump Search
+            startTime = System.nanoTime();
+            result = jumpSearch(numbers, targetValue);
+            endTime = System.nanoTime();
+            frame.jLabel16.setText("\nJump Search:");
+            frame.jLabel17.setText("Result: " + result);
+            frame.jLabel18.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
 
-        // Fibonacci Search
-        startTime = System.nanoTime();
-        result = fibonacciSearch(numbers, targetValue);
-        endTime = System.nanoTime();
-        frame.jLabel22.setText("\nFibonacci Search:");
-        frame.jLabel23.setText("Result: " + result);
-        frame.jLabel24.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
+            // Exponential Search
+            startTime = System.nanoTime();
+            result = exponentialSearch(numbers, targetValue);
+            endTime = System.nanoTime();
+            frame.jLabel19.setText("\nExponential Search:");
+            frame.jLabel20.setText("Result: " + result);
+            frame.jLabel21.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
 
-        // Determine the best search method
-        String bestMethod = "";
-        long binaryTime = endTime - startTime;
-        long jumpTime = endTime - startTime;
-        long exponentialTime = endTime - startTime;
-        long fibonacciTime = endTime - startTime;
-        
-        long minTime = Math.min(Math.min(binaryTime, jumpTime), Math.min(exponentialTime, fibonacciTime));
-        if (minTime == binaryTime) {
-            bestMethod = "Binary Search";
-        } else if (minTime == jumpTime) {
-            bestMethod = "Jump Search";
-        } else if (minTime == exponentialTime) {
-            bestMethod = "Exponential Search";
-        } else {
-            bestMethod = "Fibonacci Search";
-        }
+            // Fibonacci Search
+            startTime = System.nanoTime();
+            result = fibonacciSearch(numbers, targetValue);
+            endTime = System.nanoTime();
+            frame.jLabel22.setText("\nFibonacci Search:");
+            frame.jLabel23.setText("Result: " + result);
+            frame.jLabel24.setText("Time taken: " + (endTime - startTime) + " nanoseconds.");
 
-        frame.jLabel25.setText("\nThe best search method is: " + bestMethod);
-        
+            // Determine the best search method
+            String bestMethod = "";
+            long binaryTime = endTime - startTime;
+            long jumpTime = endTime - startTime;
+            long exponentialTime = endTime - startTime;
+            long fibonacciTime = endTime - startTime;
+
+            long minTime = Math.min(Math.min(binaryTime, jumpTime), Math.min(exponentialTime, fibonacciTime));
+            if (minTime == binaryTime) {
+                bestMethod = "Binary Search";
+            } else if (minTime == jumpTime) {
+                bestMethod = "Jump Search";
+            } else if (minTime == exponentialTime) {
+                bestMethod = "Exponential Search";
+            } else {
+                bestMethod = "Fibonacci Search";
+            }
+
+            frame.jLabel25.setText("\nThe best search method is: " + bestMethod);
+
         });
     }
-    
-    
-          
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_close_window;
+    private javax.swing.JButton btn_reset;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
